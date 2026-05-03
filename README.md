@@ -450,8 +450,7 @@ Quick summary:
 
 For bugs, questions, or feedback:
 
-- Email: support@elfreediving.com  *(replace with actual address)*
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
+- Email: lee33179@gmail.com
 
 When reporting a problem, please include:
 
