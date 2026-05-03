@@ -452,8 +452,7 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 승인은 이
 
 버그, 질문, 피드백:
 
-- 이메일: support@elfreediving.com  *(실제 주소로 교체 필요)*
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
+- 이메일: lee33179@gmail.com
 
 문제 보고 시 다음을 포함해주세요:
 
@@ -462,6 +461,3 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 승인은 이
 - 관련 스크린샷
 - 문제 발생 대략 시각 (로그와 매칭하기 위함)
 
----
-
-*이 매뉴얼은 Apnea Comp 프로젝트의 일부입니다. 소스: <https://github.com/elfreediving/apnea-comp-manual>. 마지막 업데이트: 2026-05-03.*
