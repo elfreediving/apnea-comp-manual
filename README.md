@@ -157,8 +157,10 @@ Athletes sign in before warm-up. Open the **Check-in** tab.
 - For no-shows: tap the athlete → confirm **DNS** (Did Not Show).
 - For late arrivals beyond the cutoff: tap → **Late Check-in**. They get a Red card with "Late Check-in" remark automatically.
 
-> Check-in requires internet. If you are offline, the signature step will fail with a red SnackBar — try again once reconnected. (Result-saving in Judge does work offline; check-in does not, yet.)
-> The signature drawing is for visual confirmation only — shown to the staff member at the moment of check-in and discarded as soon as the sheet closes. We do not store the signature image anywhere.
+> The signature drawing is for visual confirmation only — it is shown to the staff member at the moment of check-in and discarded as soon as the sheet closes. We do not store the signature image anywhere (not on the server, not on the device). Only the fact that a signature was captured is recorded, along with the check-in time.
+
+> Check-in works offline too. If the device is offline when you confirm, the check-in is held in device memory with a small ⛔ "Offline" badge on the card, and synced to the server automatically within 5 seconds of reconnecting. See [Offline operation](#offline-operation).
+
 ---
 
 ## Judging results
@@ -264,7 +266,7 @@ The app is designed to keep working when the internet drops mid-day, which is co
 A red bar **"You are offline"** appears at the top. You can still:
 
 - ✅ Save Judge results (stored locally, synced later)
-- ❌ Check-in athletes (requires internet — try again after reconnect)
+- ✅ Check-in athletes (stored locally, synced later)
 - ❌ Load new athlete lists from AIDA
 
 ### The Offline badge
@@ -375,9 +377,9 @@ Likely they were added in Mock mode or imported manually outside AIDA. AIDA sync
 
 Open Results → if the banner says "Update token & resync" → tap it. Pending items will be re-sent with the new token. The app caches credentials on the server and refreshes the cache when you save Edit Event, so no app restart is needed.
 
-### Check-in failed when I had no internet — does the athlete need to sign again?
+### What happens if internet drops during check-in?
 
-Yes. The signature was not saved (we never accept a check-in without confirming the server received it). Once back online, ask the athlete to sign again.
+The check-in is saved locally and the athlete card shows a small ⛔ "Offline" badge. As soon as the connection comes back, the check-in syncs to the server automatically (within 5 seconds). The athlete does not need to sign again. The signature drawing itself is not stored — it is only used for visual confirmation at the moment.
 
 ### Can I delete an event?
 
@@ -438,8 +440,8 @@ For full details on what data the App collects, how it is processed, and your ri
 
 Quick summary:
 
-- **What is stored** — your account email, display name, profile picture (if you upload one), and the competition data you enter (athlete results, signatures, activity logs).
-- **What is not stored** — athletes' contact details, photos, dates of birth, or any personal identifiers beyond what AIDA exposes publicly.
+- **What is stored** — your account email, display name, profile picture (if you upload one), and the competition data you enter (athlete results, check-in status, activity logs).
+- **What is not stored** — athletes' contact details, photos, dates of birth, signature drawings, or any personal identifiers beyond what AIDA exposes publicly.
 - **Where** — Supabase (currently US region), encrypted at rest, accessed only via Row-Level Security policies that scope data per-event.
 - **AIDA tokens** — encrypted, accessible only to Organizer / Main Judge roles, never exposed in URLs or client memory longer than necessary.
 - **Offline buffering** — judge results saved while offline live in the App's memory only and sync within seconds of reconnecting.
@@ -450,7 +452,8 @@ Quick summary:
 
 For bugs, questions, or feedback:
 
-- Email: lee33179@gmail.com
+- Email: support@elfreediving.com  *(replace with actual address)*
+- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 When reporting a problem, please include:
 
