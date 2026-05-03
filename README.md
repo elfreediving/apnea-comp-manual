@@ -452,8 +452,7 @@ Quick summary:
 
 For bugs, questions, or feedback:
 
-- Email: support@elfreediving.com  *(replace with actual address)*
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
+- Email: lee33179@gmail.com
 
 When reporting a problem, please include:
 
@@ -462,6 +461,4 @@ When reporting a problem, please include:
 - A screenshot if relevant
 - Approximate time the problem occurred (so we can match it with logs)
 
----
-
-*This manual is part of the Apnea Comp project. Source on GitHub: <https://github.com/elfreediving/apnea-comp-manual>. Last updated: 2026-05-03.*
+*Last updated: 2026-05-03.*
