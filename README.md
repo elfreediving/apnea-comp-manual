@@ -153,12 +153,12 @@ Save when done — start times are now finalised for the day.
 Athletes sign in before warm-up. Open the **Check-in** tab.
 
 - Tap an athlete card with a pending status to open the signature sheet.
-- Athlete signs on screen, tap **Save** → the athlete is marked as Checked In and the signature is stored.
+- Athlete signs on screen, tap **Save** → the athlete is marked as Checked In with the current time.
 - For no-shows: tap the athlete → confirm **DNS** (Did Not Show).
 - For late arrivals beyond the cutoff: tap → **Late Check-in**. They get a Red card with "Late Check-in" remark automatically.
 
 > Check-in requires internet. If you are offline, the signature step will fail with a red SnackBar — try again once reconnected. (Result-saving in Judge does work offline; check-in does not, yet.)
-
+> The signature drawing is for visual confirmation only — shown to the staff member at the moment of check-in and discarded as soon as the sheet closes. We do not store the signature image anywhere.
 ---
 
 ## Judging results
