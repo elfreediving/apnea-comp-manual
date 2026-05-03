@@ -436,7 +436,7 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 승인은 이
 
 버그, 질문, 피드백:
 
-- 이메일: support@elfreediving.com  *(실제 주소로 교체 필요)*
+- 이메일: lee33179@gmail.com
 - GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 문제 보고 시 다음을 포함해주세요:
