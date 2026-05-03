@@ -89,7 +89,7 @@
 - **종목** — 🏊 Pool, 🌊 Depth, 또는 👥 Team
 - **날짜** — 멀티데이 이벤트는 시작/종료 날짜 선택
 
-### AIDA 연동 (권장)
+### AIDA 연동 (필수)
 
 이벤트 진입 → **Edit Event** → 입력:
 
@@ -450,8 +450,7 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 승인은 이
 
 버그, 질문, 피드백:
 
-- 이메일: support@elfreediving.com  *(실제 주소로 교체 필요)*
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
+- 이메일: lee33179@gmail.com
 
 문제 보고 시 다음을 포함해주세요:
 
