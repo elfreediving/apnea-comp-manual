@@ -432,11 +432,26 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 승인은 이
 
 ---
 
+## 개인정보 및 데이터
+
+본 앱이 어떤 데이터를 수집하고 어떻게 처리하는지, 사용자의 권리에 대한 자세한 내용은 [개인정보처리방침](https://elfreediving.github.io/aida-competition-privacy/PRIVACY_POLICY)을 참조하세요.
+
+요약:
+
+- **저장하는 것** — 계정 이메일, 표시 이름, 프로필 사진 (업로드한 경우), 입력한 대회 데이터 (선수 결과, 사인, 활동 로그)
+- **저장하지 않는 것** — 선수의 연락처, 사진, 생년월일, AIDA에서 공개한 정보 외의 개인 식별자
+- **저장 위치** — Supabase (현재 미국 리전). 저장 시 암호화되며, Row-Level Security로 이벤트별 데이터 격리
+- **AIDA 토큰** — 암호화 저장. Organizer / Main Judge 역할만 접근 가능. URL이나 클라이언트 메모리에 필요 이상으로 노출되지 않음
+- **오프라인 버퍼링** — 오프라인에서 저장된 판정 결과는 앱 메모리에만 보관되며, 인터넷 복구 후 수 초 내 동기화
+
+---
+
 ## 연락처
 
 버그, 질문, 피드백:
 
-- 이메일: lee33179@gmail.com
+- 이메일: support@elfreediving.com  *(실제 주소로 교체 필요)*
+- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 문제 보고 시 다음을 포함해주세요:
 
