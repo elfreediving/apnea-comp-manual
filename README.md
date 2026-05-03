@@ -437,7 +437,6 @@ Pull down to refresh. If still blank, switch to another tab and back. If the iss
 For bugs, questions, or feedback:
 
 - Email: lee33179@gmail.com
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 When reporting a problem, please include:
 
