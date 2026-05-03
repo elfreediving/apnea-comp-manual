@@ -432,11 +432,26 @@ Pull down to refresh. If still blank, switch to another tab and back. If the iss
 
 ---
 
+## Privacy & Data
+
+For full details on what data the App collects, how it is processed, and your rights, see the [Privacy Policy](https://elfreediving.github.io/aida-competition-privacy/PRIVACY_POLICY).
+
+Quick summary:
+
+- **What is stored** — your account email, display name, profile picture (if you upload one), and the competition data you enter (athlete results, signatures, activity logs).
+- **What is not stored** — athletes' contact details, photos, dates of birth, or any personal identifiers beyond what AIDA exposes publicly.
+- **Where** — Supabase (currently US region), encrypted at rest, accessed only via Row-Level Security policies that scope data per-event.
+- **AIDA tokens** — encrypted, accessible only to Organizer / Main Judge roles, never exposed in URLs or client memory longer than necessary.
+- **Offline buffering** — judge results saved while offline live in the App's memory only and sync within seconds of reconnecting.
+
+---
+
 ## Contact
 
 For bugs, questions, or feedback:
 
-- Email: lee33179@gmail.com
+- Email: support@elfreediving.com  *(replace with actual address)*
+- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 When reporting a problem, please include:
 
