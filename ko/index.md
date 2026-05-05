@@ -583,7 +583,6 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 이벤트별�
 버그, 질문, 피드백:
 
 - 이메일: lee33179@gmail.com
-- GitHub issues: <https://github.com/elfreediving/apnea-comp-manual/issues>
 
 문제 보고 시 다음을 포함:
 
@@ -594,4 +593,4 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 이벤트별�
 
 ---
 
-*이 매뉴얼은 Apnea Comp 프로젝트의 일부입니다. GitHub 소스: <https://github.com/elfreediving/apnea-comp-manual>. 최종 업데이트: 2026-05-05.*
+최종 업데이트: 2026-05-05.*
