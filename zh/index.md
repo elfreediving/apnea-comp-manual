@@ -18,23 +18,24 @@
 6. [作为选手加入](#作为选手加入)
 7. [Setup：选手、Line 和 OT](#setup选手line-和-ot)
 8. [Break Times](#break-times)
-9. [Check-in](#check-in)
-10. [Start List & Speaker Mode](#start-list--speaker-mode)
-11. [输入判定结果](#输入判定结果)
-12. [罚分（Rulebook 17.7）](#罚分rulebook-177)
-13. [Protests（申诉）](#protests申诉)
-14. [Re-swim & Opener](#re-swim--opener)
-15. [日程调整（OT Delay）](#日程调整ot-delay)
-16. [推送通知](#推送通知)
-17. [离线运行](#离线运行)
-18. [AIDA 集成](#aida-集成)
-19. [多日赛事](#多日赛事)
-20. [结果与导出](#结果与导出)
-21. [显示 & 语言](#显示--语言)
-22. [FAQ](#faq)
-23. [故障排查](#故障排查)
-24. [隐私与数据](#隐私与数据)
-25. [联系方式](#联系方式)
+9. [团队赛（Team）](#团队赛team)
+10. [Check-in](#check-in)
+11. [Start List & Speaker Mode](#start-list--speaker-mode)
+12. [输入判定结果](#输入判定结果)
+13. [罚分（Rulebook 17.7）](#罚分rulebook-177)
+14. [Protests（申诉）](#protests申诉)
+15. [Re-swim & Opener](#re-swim--opener)
+16. [日程调整（OT Delay）](#日程调整ot-delay)
+17. [推送通知](#推送通知)
+18. [离线运行](#离线运行)
+19. [AIDA 集成](#aida-集成)
+20. [多日赛事](#多日赛事)
+21. [结果与导出](#结果与导出)
+22. [显示 & 语言](#显示--语言)
+23. [FAQ](#faq)
+24. [故障排查](#故障排查)
+25. [隐私与数据](#隐私与数据)
+26. [联系方式](#联系方式)
 
 ---
 
@@ -279,6 +280,28 @@ Setup 是你决定当天日程的地方：每位选手在哪条 line 游泳、�
 
 ---
 
+## 团队赛（Team）
+
+Team 类型的赛事（赛事类型 **Team**）将选手分入各队伍，由队伍的合计分数决定名次。**Setup** 中会出现一个 **Teams** 区块 — 仅针对 Team 类型的赛事。
+
+> ![Setup 中的 Teams 区块](../images/team-setup.png)
+
+### 创建与编辑队伍
+
+点按 **New Team** 打开队伍编辑器。
+
+> ![队伍编辑器 — 名称、颜色、成员](../images/team-edit.png)
+
+- **名称** — 必填。
+- **颜色** — 选一个颜色，便于在列表中辨认队伍。
+- **成员** — 勾选属于该队伍的选手。列表可按姓名或 nationality 搜索。选择一位已在其他队伍中的选手，会将其移动过来。
+
+每张队伍卡片都会显示其名称、颜色和成员数。点按卡片可 **编辑**，或使用其菜单 **删除** 它。
+
+> 在多日出场的选手只会显示一次 — 选择该选手会将其 **所有日的条目** 都分配给该队伍，因此每个人只需挑选一次。
+
+---
+
 ## Check-in
 
 选手在热身前签到。打开 **Check-in** 标签页。
@@ -479,13 +502,20 @@ Organizer 或 Main Judge 可以从其详情界面（🗑 垃圾桶图标）删�
 
 当 protest 被接受（或裁判要求重新表现）时，选手会再游一次。由于从 AIDA 加载某日的开始名单会替换当日的选手，re-swim 会先 **在队列中预留**，然后在构建目标日的名单时插入 — 这样它就绝不会被重新加载抹掉。
 
+> ![预留 re-swim — 选择日期](../images/reswim-reserve.png)
+
 1. **预留** — Judge / Main Judge / Organizer。在裁决 protest 时批准 re-swim，或为所选日期预留它（从日期下拉菜单中选择日期）。
 2. **放置** — 当构建或加载该日的开始名单时，应用会提示：*「N re-swim(s) to place.」*。选择一种自动排序（AP 升序 / 降序 / 随机），或用 **Assign Lines** 手动放置每位选手（点按选手，然后点按目标 line 和位置）。如果 re-swim 在已加载的那一天，你可以立即放置它；否则，在 Setup → Add Athlete 下方有一个 **「Place pending re-swims」** 安全按钮。
+
+> ![将 re-swim 放入开始名单](../images/reswim-placement.png)
+
 3. **原条目被排除** — 原条目会被标记为 **invalidated**：从排名（Rewards）中排除，但仍显示在 Results 中。re-swim 的结果计入当日排名，并使用原始 start ID 推送到 AIDA。
 
 ### Opener
 
 **opener** 是一个不应计入的热身或演示条目。Organizer / Main Judge 在 **Setup → Add Athlete** 下添加一个：姓名、nationality、gender、discipline、AP、PB（STA 使用 mm:ss 时间选择器；其他 discipline 使用数字）。Opener **被排除在排名之外，且绝不会发送到 AIDA**。
+
+> ![Add Athlete 对话框（opener / 手动添加）](../images/add-athlete.png)
 
 ---
 

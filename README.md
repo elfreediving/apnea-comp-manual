@@ -18,23 +18,24 @@ If you only have five minutes, read **Quick Start** below and the FAQ at the bot
 6. [Joining as an athlete](#joining-as-an-athlete)
 7. [Setup: athletes, lines, and OTs](#setup-athletes-lines-and-ots)
 8. [Break Times](#break-times)
-9. [Check-in](#check-in)
-10. [Start List & Speaker Mode](#start-list--speaker-mode)
-11. [Judging results](#judging-results)
-12. [Penalties (Rulebook 17.7)](#penalties-rulebook-177)
-13. [Protests](#protests)
-14. [Re-swim & Opener](#re-swim--opener)
-15. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
-16. [Push notifications](#push-notifications)
-17. [Offline operation](#offline-operation)
-18. [AIDA integration](#aida-integration)
-19. [Multi-day events](#multi-day-events)
-20. [Results and export](#results-and-export)
-21. [Display & Language](#display--language)
-22. [FAQ](#faq)
-23. [Troubleshooting](#troubleshooting)
-24. [Privacy & Data](#privacy--data)
-25. [Contact](#contact)
+9. [Team competitions](#team-competitions)
+10. [Check-in](#check-in)
+11. [Start List & Speaker Mode](#start-list--speaker-mode)
+12. [Judging results](#judging-results)
+13. [Penalties (Rulebook 17.7)](#penalties-rulebook-177)
+14. [Protests](#protests)
+15. [Re-swim & Opener](#re-swim--opener)
+16. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
+17. [Push notifications](#push-notifications)
+18. [Offline operation](#offline-operation)
+19. [AIDA integration](#aida-integration)
+20. [Multi-day events](#multi-day-events)
+21. [Results and export](#results-and-export)
+22. [Display & Language](#display--language)
+23. [FAQ](#faq)
+24. [Troubleshooting](#troubleshooting)
+25. [Privacy & Data](#privacy--data)
+26. [Contact](#contact)
 
 ---
 
@@ -279,6 +280,28 @@ To remove a break, tap the 🗑️ trash icon next to it in the BREAK TIMES list
 
 ---
 
+## Team competitions
+
+Team events (event type **Team**) group athletes into teams whose combined scores decide the standings. A **Teams** section appears in **Setup** — only for Team-type events.
+
+> ![Teams section in Setup](images/team-setup.png)
+
+### Creating and editing teams
+
+Tap **New Team** to open the team editor.
+
+> ![Team editor — name, color, members](images/team-edit.png)
+
+- **Name** — required.
+- **Color** — pick a colour so the team is easy to spot in lists.
+- **Members** — tick the athletes who belong to the team. The list is searchable by name or nationality. Selecting an athlete who is already on another team moves them over.
+
+Each team card shows its name, colour, and member count. Tap a card to **edit**, or use its menu to **delete** it.
+
+> An athlete who competes on more than one day appears once — selecting them assigns **all** of their day entries to the team, so you pick each person only once.
+
+---
+
 ## Check-in
 
 Athletes sign in before warm-up. Open the **Check-in** tab.
@@ -479,13 +502,20 @@ All staff and the affected athlete receive a push when a protest is **filed**, *
 
 When a protest is accepted (or a judge calls for a re-performance), the athlete swims again. Because loading a day's start list from AIDA replaces that day's athletes, a re-swim is **reserved in a queue** first, then inserted when the target day's list is built — so it is never wiped out by a reload.
 
+> ![Reserve a re-swim — choose the day](images/reswim-reserve.png)
+
 1. **Reserve** — Judge / Main Judge / Organizer. Approve the re-swim while deciding the protest, or reserve it for a chosen day (pick the date from the day dropdown).
 2. **Place** — when that day's start list is built or loaded, the app prompts: *"N re-swim(s) to place."* Choose an automatic sort (AP ascending / descending / random) or place each athlete manually with **Assign Lines** (tap the athlete, then the target line and position). If the re-swim is on the day already loaded, you can place it immediately; otherwise there is a **"Place pending re-swims"** safety button under Setup → Add Athlete.
+
+> ![Place a re-swim into the start list](images/reswim-placement.png)
+
 3. **Original excluded** — the original entry is marked **invalidated**: excluded from rankings (Rewards) but still shown in Results. The re-swim result feeds the day's ranking and is pushed to AIDA using the original start ID.
 
 ### Opener
 
 An **opener** is a warm-up or demonstration entry that should not count. Organizer / Main Judge add one under **Setup → Add Athlete**: name, nationality, gender, discipline, AP, PB (STA uses a mm:ss time picker; other disciplines use a number). Openers are **excluded from rankings and never sent to AIDA**.
+
+> ![Add Athlete dialog (opener / manual entry)](images/add-athlete.png)
 
 ---
 
