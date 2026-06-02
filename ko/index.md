@@ -116,7 +116,7 @@
 
 **Test Connection** 탭. 초록 체크가 나오면 자격 증명이 유효하고 시작 명단을 읽을 수 있다는 뜻. Save.
 
-> ![AIDA 필드가 있는 Edit Event 화면](images/edit-event-aida.png)
+> ![AIDA 필드가 있는 Edit Event 화면](../images/edit-event-aida.png)
 
 비워두거나 토큰을 `test` 또는 `demo`로 설정하면 앱은 🧪 **Mock 모드**로 동작 — 연습용 샘플 선수를 생성합니다. Mock 모드는 AIDA로 아무것도 전송하지 않습니다.
 
@@ -168,7 +168,7 @@
 
 ### AIDA에서 나 찾기
 
-> ![Find me on AIDA 검색](images/aida-find-me.png)
+> ![Find me on AIDA 검색](../images/aida-find-me.png)
 
 자동 매칭이 본인을 찾지 못하면 AIDA 선수 프로필을 직접 연결할 수 있습니다. **Edit Profile** 또는 **Athlete Setup**에서 **Find me on AIDA**를 탭하고 이름을 입력한 뒤 결과에서 본인 프로필을 선택하세요. 이렇게 하면 본인 AIDA athlete ID가 저장되어 결과가 정확히 매칭됩니다. 🔄 sync 아이콘은 본인이 등록된 이벤트도 가져옵니다. (대회 이력이 없는 선수는 검색에 안 나올 수 있는데, 그 경우 이름·국적·성별을 AIDA 등록 그대로 직접 입력하세요.)
 
@@ -202,7 +202,7 @@
 
 ## Setup: 선수, 라인, OT
 
-> ![Setup 화면 레이아웃](images/setup-screen.png)
+> ![Setup 화면 레이아웃](../images/setup-screen.png)
 
 Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 라인에서 다이빙하는지, OT(공식 시간)는 언제인지, 그날 어떤 휴식이 들어가는지.
 
@@ -222,8 +222,8 @@ Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 
 
 ### Advanced Setup (선택, 접기/펴기)
 
-> ![Advanced Setup 접힌 상태](images/setup-advanced-collapsed.png)
-> ![Advanced Setup 펼친 상태](images/setup-advanced-expanded.png)
+> ![Advanced Setup 접힌 상태](../images/setup-advanced-collapsed.png)
+> ![Advanced Setup 펼친 상태](../images/setup-advanced-expanded.png)
 
 **Advanced Setup** 카드를 탭하여 펼치면 세부 옵션이 보입니다:
 
@@ -249,7 +249,7 @@ Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 
 
 ### 시간 기준 휴식 (Lunch Break 등)
 
-> ![시간 기준 휴식](images/break-time-based.png)
+> ![시간 기준 휴식](../images/break-time-based.png)
 
 모든 사람이 미리 합의한 고정 시각의 휴식(점심, 시상식 등)에 사용:
 
@@ -262,8 +262,8 @@ Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 
 
 ### After Athlete 휴식 (Build 48 신규)
 
-> ![After Athlete 휴식 추가 화면](images/break-after-athlete-add.png)
-> ![After Athlete 휴식 목록 표시](images/break-after-athlete-listed.png)
+> ![After Athlete 휴식 추가 화면](../images/break-after-athlete-add.png)
+> ![After Athlete 휴식 목록 표시](../images/break-after-athlete-listed.png)
 
 특정 선수가 끝난 후에 휴식을 넣고 싶을 때 사용 (시계 시간과 무관). 전형적 시나리오: 워밍업 선수들이 끝난 후 공식 선수가 시작하기 전 60분 휴식.
 
@@ -299,7 +299,7 @@ Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 
 
 ## Start List & Speaker Mode
 
-> ![Start List 카운트다운 화면](images/start-list-countdown.png)
+> ![Start List 카운트다운 화면](../images/start-list-countdown.png)
 
 Start List 탭은 그날의 출전 순서와 다음 선수 OT까지의 실시간 카운트다운을 보여줍니다. OT가 가까워지면 앱이 카운트다운을 음성으로 출력하므로, 선수와 심판이 화면을 보지 않아도 들을 수 있습니다.
 
@@ -314,7 +314,7 @@ OT 이전 cue:
 
 ### 뮤트 버튼
 
-> ![Start List 뮤트 토글](images/start-list-mute.png)
+> ![Start List 뮤트 토글](../images/start-list-mute.png)
 
 AppBar의 🔊 / 🔇 아이콘을 탭하여 음성 안내를 끄거나 켤 수 있습니다. 다음과 같은 경우 유용합니다:
 
@@ -326,7 +326,7 @@ AppBar의 🔊 / 🔇 아이콘을 탭하여 음성 안내를 끄거나 켤 수 
 
 ### Speaker Mode (스피커 모드)
 
-> ![Speaker Mode 활성화 상태](images/speaker-mode.png)
+> ![Speaker Mode 활성화 상태](../images/speaker-mode.png)
 
 Speaker Mode는 디바이스를 **전용 카운트다운 안내기**로 만듭니다 — 행사장 메인 스피커에 연결하기 적합합니다. 활성화하면:
 
@@ -351,7 +351,7 @@ Speaker Mode는 디바이스를 **전용 카운트다운 안내기**로 만듭�
 
 ## 판정 결과 입력
 
-> ![선수 카드가 있는 Judge 탭](images/judge-tab.png)
+> ![선수 카드가 있는 Judge 탭](../images/judge-tab.png)
 
 Judge 탭은 현재 일자의 모든 선수를 표시합니다. 카드를 탭해서 결과를 입력합니다.
 
@@ -412,7 +412,7 @@ AIDA Rulebook 4.1.16.2은 모든 Yellow와 Red에 서면 사유를 요구합니�
 
 ### 다중 선택 및 카드 결합
 
-> ![Red 카드 다중 선택 시트](images/judge-red-multi-select.png)
+> ![Red 카드 다중 선택 시트](../images/judge-red-multi-select.png)
 
 Red 카드를 탭하면 사유 시트에 **Red와 Yellow 사유가 두 그룹**으로 동시에 표시됩니다:
 
@@ -437,12 +437,12 @@ Organizer, Main Judge, Judge, 또는 선수 본인. 수수료(fee)는 앱에서 
 
 ### 선수가 직접 제출
 
-> ![선수 이의제기 제출](images/protest-file.png)
+> ![선수 이의제기 제출](../images/protest-file.png)
 
 1. 선수 모드 → **My Info** → 결과 옆 **File Protest** 탭.
 2. 사유를 입력하고 화면에 서명한 뒤 제출.
 
-> ![이의제기 서명 패드](images/protest-sign.png)
+> ![이의제기 서명 패드](../images/protest-sign.png)
 
 상태가 **Pending**(jury 대기)이 됩니다.
 
@@ -454,11 +454,11 @@ Organizer, Main Judge, Judge, 또는 선수 본인. 수수료(fee)는 앱에서 
 
 ### Jury 결정
 
-> ![이의제기 목록](images/protest-list.png)
+> ![이의제기 목록](../images/protest-list.png)
 
 **More → Protests**(Organizer / Main Judge / Judge)를 엽니다. 목록은 상태별로 그룹화됩니다(Awaiting signature / Pending / Reviewing / Accepted / Rejected / Withdrawn). 항목을 탭해 결정합니다.
 
-> ![이의제기 결정 화면](images/protest-decide.png)
+> ![이의제기 결정 화면](../images/protest-decide.png)
 
 - **Accept** — 결과(card, RP, remarks)를 수정할 수 있습니다. 선수 기록이 자동 갱신되고, 변경이 Results·Rewards·AIDA에 반영됩니다.
 - **Reject** / **Withdraw** — 결과 유지.
@@ -499,7 +499,7 @@ Organizer 또는 Main Judge는 상세 화면(🗑 휴지통 아이콘)에서 어
 
 **Start List** 또는 **Judge** 탭의 AppBar 우측, 역할 배지 직전에 🕒 아이콘이 있습니다. **Organizer와 Main Judge에게만 표시됩니다.**
 
-> ![OT Delay 아이콘 위치](images/ot-delay-icon.png)
+> ![OT Delay 아이콘 위치](../images/ot-delay-icon.png)
 
 ### 사용법
 
@@ -591,7 +591,7 @@ More 메뉴에서 **Send Push**를 열면 작은 패널에 세 버튼이 있습�
 
 ### Offline 배지
 
-> ![선수 카드의 Offline 배지](images/offline-badge.png)
+> ![선수 카드의 Offline 배지](../images/offline-badge.png)
 
 오프라인에서 결과를 저장하면 선수 카드에 AIDA 동기화 배지 대신 작은 **⛔ Offline** 배지가 표시됩니다. 의미:
 
@@ -605,7 +605,7 @@ More 메뉴에서 **Send Push**를 열면 작은 패널에 세 버튼이 있습�
 
 자동 재시도가 따라잡지 못한 경우 **Results** 열기:
 
-> ![Results 동기화 배너](images/results-banner.png)
+> ![Results 동기화 배너](../images/results-banner.png)
 
 대기 중인 항목이 있으면 주황색 배너가 표시됨:
 
@@ -695,13 +695,13 @@ Edit Event → 두 값 입력 → Test Connection → Save. 앱은 토큰을 서
 
 ### 테마
 
-> ![테마 선택](images/theme-picker.png)
+> ![테마 선택](../images/theme-picker.png)
 
 아바타 탭 → **Theme** → **System default**, **Light**, **Dark** 중 선택.
 
 ### 언어
 
-> ![언어 선택](images/language-picker.png)
+> ![언어 선택](../images/language-picker.png)
 
 아바타 탭 → **Language** → **System default**, **English**, **한국어**, **日本語**, **简体中文**, **繁體中文** 중 선택. 즉시 전환되고 선택이 저장됩니다.
 
