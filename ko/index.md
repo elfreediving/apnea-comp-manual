@@ -811,7 +811,7 @@ Users 탭 → 이름 찾기 → 역할 부여 (Judge / Staff 등). 이벤트별�
 
 ## 개인정보 및 데이터
 
-앱이 수집하는 데이터, 처리 방식, 사용자 권리에 대한 자세한 내용은 [개인정보처리방침](https://elfreediving.github.io/aida-competition-privacy/PRIVACY_POLICY_KO)을 참조하세요.
+앱이 수집하는 데이터, 처리 방식, 사용자 권리에 대한 자세한 내용은 [개인정보처리방침](https://elfreediving.github.io/aida-competition-privacy/ko/PRIVACY_POLICY)을 참조하세요.
 
 요약:
 

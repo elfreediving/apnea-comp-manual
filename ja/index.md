@@ -809,7 +809,7 @@ Users タブを開く → その人の名前を見つける → 役割（Judge /
 
 ## プライバシーとデータ
 
-App が収集するデータ、その処理方法、あなたの権利についての詳細は、[プライバシーポリシー](https://elfreediving.github.io/aida-competition-privacy/PRIVACY_POLICY) を参照してください。
+App が収集するデータ、その処理方法、あなたの権利についての詳細は、[プライバシーポリシー](https://elfreediving.github.io/aida-competition-privacy/ja/PRIVACY_POLICY) を参照してください。
 
 簡単な要約:
 

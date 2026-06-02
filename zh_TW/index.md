@@ -809,7 +809,7 @@ OT 計算在儲存時執行。如果你重新排序了選手但看到錯誤的 O
 
 ## 隱私與資料
 
-有關 App 收集哪些資料、如何處理以及你的權利的完整詳情，請參見 [隱私政策](https://elfreediving.github.io/aida-competition-privacy/PRIVACY_POLICY)。
+有關 App 收集哪些資料、如何處理以及你的權利的完整詳情，請參見 [隱私政策](https://elfreediving.github.io/aida-competition-privacy/zh_TW/PRIVACY_POLICY)。
 
 簡要概述：
 
