@@ -22,16 +22,19 @@ If you only have five minutes, read **Quick Start** below and the FAQ at the bot
 10. [Start List & Speaker Mode](#start-list--speaker-mode)
 11. [Judging results](#judging-results)
 12. [Penalties (Rulebook 17.7)](#penalties-rulebook-177)
-13. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
-14. [Push notifications](#push-notifications)
-15. [Offline operation](#offline-operation)
-16. [AIDA integration](#aida-integration)
-17. [Multi-day events](#multi-day-events)
-18. [Results and export](#results-and-export)
-19. [FAQ](#faq)
-20. [Troubleshooting](#troubleshooting)
-21. [Privacy & Data](#privacy--data)
-22. [Contact](#contact)
+13. [Protests](#protests)
+14. [Re-swim & Opener](#re-swim--opener)
+15. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
+16. [Push notifications](#push-notifications)
+17. [Offline operation](#offline-operation)
+18. [AIDA integration](#aida-integration)
+19. [Multi-day events](#multi-day-events)
+20. [Results and export](#results-and-export)
+21. [Display & Language](#display--language)
+22. [FAQ](#faq)
+23. [Troubleshooting](#troubleshooting)
+24. [Privacy & Data](#privacy--data)
+25. [Contact](#contact)
 
 ---
 
@@ -63,7 +66,7 @@ We recommend each judge / staff member uses their own device. The app supports s
 ### For Staff (judges, check-in officials, …)
 
 1. Open the app, sign in.  
-   *Tip: tick **Remember email** at sign-in so your email is pre-filled next time. The password is never saved on the device.*
+   *Tip: tick **Remember email** to pre-fill your email next time. You can also tick **Remember password** — the password is then kept in your device's secure keystore (iOS Keychain / Android EncryptedSharedPreferences), never on our servers. Sign out to clear both.*
 2. Events screen → tap **Join with code** → paste the invite code.
 3. You appear as Pending until the Organizer approves you and assigns a role (Judge, Main Judge, Staff, …).
 
@@ -138,7 +141,9 @@ If you accidentally use the wrong code, ask the Organizer to remove you from Use
 
 ## Joining as an athlete
 
-If you are competing rather than running the event, sign up as an athlete to see your start list, OT, lane, and personal results.
+If you are competing rather than running the event, sign up as an athlete to see your start list, OT, line, and personal results.
+
+You can switch between staff and athlete views at any time: tap your avatar (top-right) → **Switch to Athlete Mode** (and back the same way).
 
 ### How it works
 
@@ -161,12 +166,21 @@ If two athletes share the same name, automatic matching cannot decide which one 
 3. You open the app → Events → **Enter invite code** → paste it.
 4. The app verifies the code and links your account.
 
+### Find me on AIDA
+
+> ![Find me on AIDA search](images/aida-find-me.png)
+
+If automatic matching does not find you, you can link your AIDA athlete profile by hand. In **Edit Profile** or **Athlete Setup**, tap **Find me on AIDA**, type your name, and pick your profile from the results. This stores your AIDA athlete ID so your results match correctly. The 🔄 sync icon also pulls in events you are registered for. (Athletes with no competition history may not appear in search — in that case enter your name, nationality, and gender manually, exactly as registered with AIDA.)
+
 ### What you can see
 
+Athlete Mode has four tabs: **My Info**, **Start List**, **Results**, and **Rewards** (past events show three — no Start List).
+
 - 🏊 Athlete role: read-only access to events you appear in.
-- Start list, your assigned OT and lane.
-- Your check-in status (Pending / Checked-in / DNS / Late).
-- Your published results.
+- **My Info** — your assigned OT, line, check-in status (Pending / Checked-in / DNS / Late), and your result. You can also file a protest here (see [Protests](#protests)).
+- **Start List** — the day's running order, with a "Show my line only" filter.
+- **Results** — published results.
+- **Rewards** — points standings by discipline and gender, with your row highlighted.
 
 You cannot see other athletes' personal information, judges' notes, or AIDA tokens.
 
@@ -180,8 +194,9 @@ If you allow notifications, you receive:
 - **Check-in deadline reminders** — automatic, only if you have not checked in yet:
   - 1 hour before check-in deadline (which is OT − 1h)
   - 30 minutes before check-in deadline
+- **Protest updates** — if a protest concerning you is filed on your behalf (asking for your signature) or decided by the jury.
 
-You can turn notifications off at any time in your device's system settings or in the app's About screen.
+Notification text arrives in your chosen app language. You can turn notifications off at any time in your device's system settings or in the app's About screen.
 
 ---
 
@@ -203,7 +218,7 @@ Setup is where you decide the schedule for the day: which line each athlete swim
 - **Lines** — number of lanes (Pool) or platform lines (Depth).
 - **First OT** — the time when the first athlete starts (e.g. `09:00`).
 - **Interval** — gap between consecutive athletes on the same line.
-- **Depth Line Interval** (Depth only) — minimum gap between two athletes on different lines. Must satisfy `(lines − 1) × line_interval < athlete_interval`, otherwise the schedule cannot be generated.
+- **Depth Line Interval** (Depth / Team only) — when **ON**, the lines run sequentially: each line starts at a staggered offset (Line 1, then Line 2 a few minutes later, …), and the Start List shows a per-line countdown. The offset must satisfy `(lines − 1) × line_interval < athlete_interval`, otherwise the schedule cannot be generated. When **OFF**, all lines run **in parallel** — the athletes in the same row share the same OT, exactly like Pool mode.
 
 ### Advanced Setup (optional, collapsible)
 
@@ -217,12 +232,12 @@ Tap **Advanced Setup** to expand more options for fine-grained control:
 
 ### Line assignment
 
-After loading athletes, open **Line Assignment** to drag them between lines and reorder. OTs are recalculated automatically:
+After loading athletes, open **Assign Lines** to move them between lines and reorder. OTs are recalculated automatically:
 
 - Pool: round-robin assignment, OT depends on position within the line.
 - Depth: full sequence with line cycling, accounting for the depth line interval rule.
 
-**Direct lane assignment** — for special cases (e.g. a specific lane reserved for a national record attempt), tap an athlete and select the target lane directly. The schedule re-flows to honour your choice.
+**Direct line assignment** — for special cases (e.g. a specific line reserved for a national record attempt, or placing a re-swim — see [Re-swim & Opener](#re-swim--opener)), tap an athlete, then tap the target line and position. The schedule re-flows to honour your choice.
 
 Save when done — start times are now finalised for the day.
 
@@ -269,9 +284,12 @@ To remove a break, tap the 🗑️ trash icon next to it in the BREAK TIMES list
 Athletes sign in before warm-up. Open the **Check-in** tab.
 
 - Tap an athlete card with a pending status to open the signature sheet.
-- Athlete signs on screen, tap **Save** → the athlete is marked as Checked In with the current time.
+- Athlete signs on screen, tap **Save** → the athlete is marked as Checked In with the current time. The card then shows both the OT and the check-in time.
 - For no-shows: tap the athlete → confirm **DNS** (Did Not Show).
 - For late arrivals beyond the cutoff: tap → **Late Check-in**. They get a Red card with "Late Check-in" remark automatically.
+- **Automatic late check-in** — an athlete still pending once the check-in deadline (OT − 1h) has passed is marked **Late Check-in** automatically. The pending list shows each athlete's deadline as `Check-in HH:mm`.
+- **AIDA sync** — DNS and Late Check-in are submitted to AIDA automatically (as a Red card / 0 points), just like a judged result. You no longer need to enter these by hand in Judge.
+- Tap a mini card at the top (In / Late / DNS / Pending) to filter the list to that group.
 
 > The signature drawing is for visual confirmation only — it is shown to the staff member at the moment of check-in and discarded as soon as the sheet closes. We do not store the signature image anywhere (not on the server, not on the device). Only the fact that a signature was captured is recorded, along with the check-in time.
 
@@ -287,10 +305,12 @@ The Start List tab shows the day's running order with a live countdown to the ne
 
 ### Voice countdown
 
-The countdown is announced at fixed intervals before OT:
-`5:00`, `4:00`, `3:00`, `2:00`, `1:30`, `1:00`, `0:30`, `0:20`, `0:10`, then every second from `0:10` down to `0`, ending with "Official top!"
+As each OT approaches, the app plays spoken cues so athletes and judges hear the count without watching the screen. The cues are **pre-recorded audio files**, so they sound **identical on iOS and Android** (earlier versions used each phone's built-in text-to-speech, which differed between devices).
 
-If the athlete is between −25 s and −30 s before OT, "thirty" is announced quickly (so it does not overlap with the "twenty" that follows). At −31 s a normal "Start cancelled" is spoken if the athlete failed to start. Other cues use the standard speech rate.
+Cues before OT:
+`2:00` ("two minutes to official top"), `1:30`, `1:00`, `0:30`, `0:20`, `0:10`, then `5 — 4 — 3 — 2 — 1`, and at OT: **"official top"**.
+
+Cues during the start window (after OT): **"plus one"** at +1 s, then the elapsed seconds are called as the window runs out — up to the discipline's limit — ending with **"start cancelled"** if the athlete has not started by the end of the window.
 
 ### Mute button
 
@@ -403,6 +423,72 @@ Yellow card on its own also supports multi-select (e.g. Early Start + Grab). Yel
 
 ---
 
+## Protests
+
+A protest is a formal challenge to a result, filed under AIDA Rulebook 17.7. Apnea Comp tracks the whole flow — filing, the athlete's signature, the jury's decision, and any change to the result.
+
+**Every protest ends with the athlete's signature**, even when a staff member starts it on the athlete's behalf.
+
+### Who can file
+
+Organizer, Main Judge, Judge, or the athlete. Fees are not tracked in the app.
+
+### Filing as an athlete
+
+> ![Athlete files a protest](images/protest-file.png)
+
+1. Athlete Mode → **My Info** → tap **File Protest** next to your result.
+2. Enter the reason, sign on screen, and submit.
+
+> ![Protest signature pad](images/protest-sign.png)
+
+The protest status becomes **Pending** — waiting for the jury.
+
+### Filing on behalf (staff)
+
+1. **Judge** tab → tap an athlete card → **File Protest (on behalf)**.
+2. Enter the reason and submit. No signature yet.
+3. The protest goes to the athlete as **Awaiting signature**. The athlete opens **My Info** on their own phone, reviews it, and signs — only then does it become **Pending**.
+
+### Jury decision
+
+> ![Protest list](images/protest-list.png)
+
+Open **More → Protests** (Organizer / Main Judge / Judge). The list groups protests by status (Awaiting signature / Pending / Reviewing / Accepted / Rejected / Withdrawn). Tap one to decide.
+
+> ![Protest decision screen](images/protest-decide.png)
+
+- **Accept** — you can amend the result (card, RP, remarks). The athlete's record updates automatically, and the change flows to Results, Rewards, and AIDA.
+- **Reject** / **Withdraw** — the result stands.
+
+A protest cannot be decided while it is still **Awaiting signature** — the athlete must sign first.
+
+### Deleting a protest
+
+Organizer or Main Judge can delete any protest from its detail screen (🗑 trash icon) — use this to clear a test entry, or a legacy protest that is stuck waiting for a signature that will never come.
+
+### Notifications
+
+All staff and the affected athlete receive a push when a protest is **filed**, **awaiting signature**, or **decided**, in their chosen app language.
+
+---
+
+## Re-swim & Opener
+
+### Re-swim
+
+When a protest is accepted (or a judge calls for a re-performance), the athlete swims again. Because loading a day's start list from AIDA replaces that day's athletes, a re-swim is **reserved in a queue** first, then inserted when the target day's list is built — so it is never wiped out by a reload.
+
+1. **Reserve** — Judge / Main Judge / Organizer. Approve the re-swim while deciding the protest, or reserve it for a chosen day (pick the date from the day dropdown).
+2. **Place** — when that day's start list is built or loaded, the app prompts: *"N re-swim(s) to place."* Choose an automatic sort (AP ascending / descending / random) or place each athlete manually with **Assign Lines** (tap the athlete, then the target line and position). If the re-swim is on the day already loaded, you can place it immediately; otherwise there is a **"Place pending re-swims"** safety button under Setup → Add Athlete.
+3. **Original excluded** — the original entry is marked **invalidated**: excluded from rankings (Rewards) but still shown in Results. The re-swim result feeds the day's ranking and is pushed to AIDA using the original start ID.
+
+### Opener
+
+An **opener** is a warm-up or demonstration entry that should not count. Organizer / Main Judge add one under **Setup → Add Athlete**: name, nationality, gender, discipline, AP, PB (STA uses a mm:ss time picker; other disciplines use a number). Openers are **excluded from rankings and never sent to AIDA**.
+
+---
+
 ## Schedule adjustments (OT Delay)
 
 If the day slips — long warm-up, an incident, equipment issue — you can shift remaining OTs without rebuilding the start list.
@@ -438,7 +524,7 @@ Every OT from the chosen athlete onward shifts forward by that amount. The corre
 
 ## Push notifications
 
-Apnea Comp uses push notifications for time-sensitive event updates. Notifications are delivered through Firebase Cloud Messaging.
+Apnea Comp uses push notifications for time-sensitive event updates. Notifications are delivered through OneSignal, which forwards them to APNs (iOS) and Firebase Cloud Messaging (FCM, Android). Each notification is sent in the recipient's chosen app language.
 
 ### What gets sent
 
@@ -463,6 +549,9 @@ These run without staff action:
 | OT Delay applied | Affected athletes only | Immediately when an Organizer / Main Judge applies a delay |
 | Check-in deadline reminder (1 hour) | Athletes who have not checked in | 2 hours before OT (= 1 hour before check-in deadline) |
 | Check-in deadline reminder (30 minutes) | Athletes who have not checked in | 1.5 hours before OT (= 30 minutes before check-in deadline) |
+| Protest filed | All event staff + the athlete | When a protest is submitted |
+| Protest awaiting signature | All event staff + the athlete | When staff file on the athlete's behalf |
+| Protest decided | All event staff + the athlete | When the jury accepts / rejects / withdraws |
 
 Once an athlete checks in (or is marked DNS / Late), the reminders stop.
 
@@ -584,7 +673,37 @@ The **Results** tab shows live standings, updated as judgments come in.
 - **Discipline filter** to narrow by event.
 - **Sync banners** (if any) at the top: Offline pending, AIDA pending, or token issues.
 - **Athlete list** sorted by points, with detail on tap.
-- **Export** — share a CSV / image for posting on a notice board or sending to athletes.
+- **Export** — share a CSV for posting on a notice board or sending to athletes.
+
+### Rewards & ranking
+
+The **Rewards** tab (also a tab in Athlete Mode) ranks athletes by points, grouped by discipline and gender.
+
+- **Day chips** — Total, Day 1, Day 2, … to scope the standings.
+- **Include yellow card scores** toggle.
+- **Tiebreak** (⚙ top-right) — drag to reorder the tiebreak rules. The AIDA default is: total points → fewer Red cards → fewer Yellow cards → more White cards.
+- Openers and invalidated (re-swum) entries are excluded from rankings; everyone still appears in Results.
+- **Export CSV** — the ↓ icon shares a UTF-8 CSV (opens correctly in Excel / Numbers in every language) reflecting the current Day / Yellow / Tiebreak settings.
+
+---
+
+## Display & Language
+
+Both settings live in the avatar menu (top-right), and apply instantly across the app.
+
+### Theme
+
+> ![Theme picker](images/theme-picker.png)
+
+Tap your avatar → **Theme** → choose **System default**, **Light**, or **Dark**.
+
+### Language
+
+> ![Language picker](images/language-picker.png)
+
+Tap your avatar → **Language** → choose **System default**, **English**, **한국어**, **日本語**, **简体中文**, or **繁體中文**. The app switches immediately and remembers your choice.
+
+Competition-standard terms stay in English in every language — OT, AP, RP, PB, discipline codes (STA, DYN, …), WHITE / YELLOW / RED, role names, and Line — so staff from different countries read the same labels.
 
 ---
 
@@ -621,7 +740,15 @@ Common causes:
 
 ### Can I delete an event?
 
-Currently events can be archived but not permanently deleted from the app. Contact us if you need a deletion (privacy, GDPR-style request).
+Yes. An Organizer or Main Judge can delete an event — swipe it in the event list, or use **Edit Event → Delete**. Deletion is permanent and removes all of that event's data (athletes, results, logs, check-in status, protests). Generated protest PDFs in file storage are not auto-removed on full-event deletion; contact us if you need them purged.
+
+### A protest is stuck on "Awaiting signature" and the athlete can't sign
+
+This happens with old protests created before the current signature flow. An Organizer or Main Judge can open **More → Protests → the protest → 🗑** and delete it. See [Protests → Deleting a protest](#protests).
+
+### The app shows an "Update required" screen and won't let me in
+
+Your installed version is below the minimum the organizer set for live use. Update to the latest version from the App Store / Play Store, then reopen — the app re-checks and lets you through.
 
 ### Do I need to keep the app open during the day?
 
@@ -686,12 +813,13 @@ For full details on what data the App collects, how it is processed, and your ri
 
 Quick summary:
 
-- **What is stored** — your account email, display name, profile picture (if you upload one), AIDA athlete UUID (if you signed up as an athlete), push notification subscription ID (if notifications are enabled), and the competition data you enter (athlete results, check-in status, activity logs).
-- **What is not stored** — athletes' contact details, photos, dates of birth, signature drawings, or any personal identifiers beyond what AIDA exposes publicly.
+- **What is stored** — your account email, display name, profile picture (if you upload one), AIDA athlete UUID (if you signed up as an athlete), push notification subscription ID (if notifications are enabled), and the competition data you enter (athlete results, check-in status, activity logs, and protests).
+- **Protest signatures** — when a protest is filed, the athlete's (and jury's) hand-drawn signature **is** stored as part of the official protest record, and embedded in a generated PDF. This is the one exception to the rule below.
+- **What is not stored** — athletes' contact details, photos, dates of birth, **check-in** signature drawings (the check-in pad is visual confirmation only), or any personal identifiers beyond what AIDA exposes publicly.
 - **Where** — Supabase (currently US region), encrypted at rest, accessed only via Row-Level Security policies that scope data per-event. Push notifications transit through OneSignal, which forwards them to APNs (iOS) and FCM (Android).
 - **AIDA tokens** — encrypted, accessible only to Organizer / Main Judge roles, never exposed in URLs or client memory longer than necessary.
 - **Offline buffering** — judge results saved while offline live in the App's memory only and sync within seconds of reconnecting.
-- **Local device storage** — if you tick **Remember email** at sign-in, your email address is saved to your device's local storage (SharedPreferences on Android, NSUserDefaults on iOS) so it auto-fills next time. Passwords are never stored. Uncheck Remember email or uninstall the app to remove it.
+- **Local device storage** — **Remember email** saves your email to standard local storage (SharedPreferences / NSUserDefaults). **Remember password**, if you enable it, saves your password to the device's secure keystore (iOS Keychain / Android EncryptedSharedPreferences), never to our servers. Your theme and language choices are also stored locally. Sign out or uninstall to clear stored credentials.
 
 ---
 
@@ -710,4 +838,4 @@ When reporting a problem, please include:
 
 ---
 
-Last updated: 2026-05-12.*
+Last updated: 2026-06-02.
