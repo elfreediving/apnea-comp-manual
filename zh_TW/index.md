@@ -22,7 +22,7 @@
 10. [Check-in](#check-in)
 11. [Start List & Speaker Mode](#start-list--speaker-mode)
 12. [輸入判定結果](#輸入判定結果)
-13. [罰分（Rulebook 17.7）](#罰分rulebook-177)
+13. [罰分（Rulebook 17.8）](#罰分rulebook-178)
 14. [Protests（申訴）](#protests申訴)
 15. [Re-swim & Opener](#re-swim--opener)
 16. [日程調整（OT Delay）](#日程調整ot-delay)
@@ -231,6 +231,8 @@ Setup 是你決定當天日程的地方：每位選手在哪條 line 游泳、�
 - **依 discipline 設定 line（僅 Pool）** — 為每個 discipline 指派不同數量的水道。例如，STA 使用 4 條水道，但 DYN/DNF 僅使用 2 條水道。應用程式會為每個 discipline 產生獨立的子日程，並將它們拼接在一起。
 - **跨 discipline 的水道延續** — 當上一個 discipline 在 line 中途結束（例如 STA 在 4 條水道中的第 3 條結束）時，下一個 discipline 既可以從水道 1 重新開始（預設），也可以從水道 4 繼續。當裁判在不同 discipline 之間留在同一條水道時很有用。
 
+- **Custom Intervals（單獨設定間隔）** — 在基本間隔之外，依出發順序號區間設定不同間隔。例如：#1–#10 → 10 分鐘，#11–#20 → 8 分鐘，#21–#30 → 7 分鐘。點按 **Add interval（新增間隔）** → 設定 *起始順序 / 結束順序 / 間隔* → **Done**。OT 會自動重新計算並儲存。此為按日設定；區間不可重疊且需在選手數以內；沒有區間則全部套用基本間隔。若當天存在手動休息，則跳過 OT 重算（與 Save Configuration 相同 — 保護手動調整的 OT）。
+
 ### Line 指派
 
 載入選手後，開啟 **Assign Lines** 在 line 之間移動並重新排序。OT 會自動重新計算：
@@ -380,7 +382,7 @@ Judge 分頁顯示當天的所有選手。點按一張卡片以輸入結果。
 
 1. **RP** — 實際表現（static 為時間，dynamic 為距離，depth 為深度）。
 2. **卡片** — White（乾淨）、Yellow（罰分）或 Red（DQ）。
-3. **罰分原因** — 選擇 White 以外的卡片時必填。參見 [罰分](#罰分rulebook-177)。
+3. **罰分原因** — 選擇 White 以外的卡片時必填。參見 [罰分](#罰分rulebook-178)。
 4. **Start offset** — 提前（負數）或延遲（正數）的秒數。用於出發視窗罰分的計算。
 5. **REMARKS** — 對於某些原因（BO、Other Penalty、DQ Other 等）必填。應用程式會預填一個範本；請補全缺漏的細節。
 6. 點按 **Save Result**。
@@ -397,9 +399,9 @@ Judge 分頁顯示當天的所有選手。點按一張卡片以輸入結果。
 
 ---
 
-## 罰分（Rulebook 17.7）
+## 罰分（Rulebook 17.8）
 
-應用程式遵循 AIDA Rulebook 第 17.7 節。原因依卡片顏色分組。
+應用程式遵循 AIDA Rulebook 第 17.8 節。原因依卡片顏色分組。
 
 ### 🟨 Yellow 卡原因
 
@@ -448,7 +450,7 @@ Yellow 卡單獨也支援多選（例如 Early Start + Grab）。Yellow 卡不�
 
 ## Protests（申訴）
 
-protest 是根據 AIDA Rulebook 17.7 提出的對某一結果的正式異議。Apnea Comp 會追蹤整個流程 — 提交、選手的簽名、jury 的裁決，以及對結果的任何變更。
+protest 是根據 AIDA Rulebook 17.8 提出的對某一結果的正式異議。Apnea Comp 會追蹤整個流程 — 提交、選手的簽名、jury 的裁決，以及對結果的任何變更。
 
 **每個 protest 都以選手的簽名結束**，即使是工作人員代選手發起的也是如此。
 
@@ -711,11 +713,22 @@ Edit Event → 貼上兩個值 → Test Connection → Save。應用程式會將
 
 - **Day 標籤** — Total、Day 1、Day 2 … 以界定排名範圍。
 - **Include yellow card scores** 開關。
-- **Tiebreak**（右上 ⚙） — 拖曳以重新排列 tiebreak 規則。AIDA 預設為：total points → Red 卡更少 → Yellow 卡更少 → White 卡更多。
+- **Tiebreak**（右上 ⚙） — 拖曳以重新排列 tiebreak 規則。AIDA 預設（Rulebook §4.2.16）為：total points → **AP−RP 差最小** → Red 更少 → Yellow 更少 → White 更多。完全相同者共享同一名次，下一名次跳過（**奧林匹克並列**，例：兩個第 1 → 下一個是第 3）。深度 RP 以整數米輸入（§4.1.22.1）。
 - Opener 與 invalidated（已 re-swim）的項目會被排除在排名之外；所有人仍會出現在 Results 中。
 - **Export CSV** — ↓ 圖示分享一份 UTF-8 CSV（在所有語言中都能在 Excel / Numbers 中正確開啟），反映目前的 Day / Yellow / Tiebreak 設定。
 
 ---
+
+### Records (WR/CR/NR) — 紀錄
+
+標記並確認世界 / 大洲 / 國家紀錄挑戰。
+
+1. **標記比賽** — 在建立或編輯比賽時，在 **Record Attempts** 中開啟 **World Record** / **Continental**。之後比賽卡片和 Results 頂部會顯示 🏅 徽章。
+2. **檢查紀錄** — 在 **Results** 標籤點按 **Check WR/CR/NR**。對每位白卡選手，App 會依國籍、項目、性別查詢 AIDA 官方紀錄並建議 WR / CR / NR。需要連網 — 無法取得的會跳過。
+3. **確認** *(Organizer / Main Judge)* — 建議顯示為虛線徽章（如「WR?」）。點按以確認等級或清除。已確認的紀錄顯示為實線徽章，並包含在 CSV 匯出中。
+
+> 僅白卡（有效）成績可作為紀錄。帶罰分的成績不能成為世界或大洲紀錄（Rulebook §10.2）。建議是將實現成績（RP）與當前紀錄比較，最終由裁判決定。
+
 
 ## 顯示 & 語言
 
