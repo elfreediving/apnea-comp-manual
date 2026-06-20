@@ -335,6 +335,12 @@ OT 之前的提示：
 
 出發視窗期間（OT 之後）的提示：在 +1 秒時 **「plus one」**，隨後隨著視窗走完會報出經過的秒數 — 直到該 discipline 的上限 — 如果選手在視窗結束前仍未出發，則以 **「start cancelled」** 結束。
 
+### 語音提示（Announce）
+
+除了自動的倒數計時提示，Start List 還有一個 **Announce（語音提示）** 按鈕，可手動觸發一次語音提醒。點按它，輸入 OT 之前的分鐘數，裝置便會朗讀「N minutes to Official Top」。
+
+這與自動的語音倒數計時佇列各自獨立 — 它是由你按需觸發的一次性提示。語音會依裝置語言（en / ko / ja / zh / zh_TW）發聲。
+
 ### 靜音按鈕
 
 > ![Start List 上的靜音切換](../images/start-list-mute.png)
@@ -361,6 +367,10 @@ Speaker Mode 將裝置變成一個 **專用倒數計時播報器** — 非常適
 **要啟用**：開啟角色 / 個人檔案選單 → **Speaker Mode** → 設定一個 4 位 PIN。
 
 **要退出**：點按 Speaker Mode 徽章 → 輸入 PIN → 確認。
+
+#### 背景語音播放
+
+在 Speaker Mode 中，語音（倒數計時佇列與 Announce 提示）即使在應用程式被切到背景或螢幕被鎖定時也會 **持續播放**。iOS 會維持一條無聲的 keep-alive 音軌，Android 則使用一則前景服務通知（「Start list countdown active」）。如此一來，即使手機已鎖定，場館的主喇叭仍會持續播報。此行為僅限 Speaker Mode。
 
 建議設定：將一部專用手機或平板插入場館的音響系統，並在整個比賽日保持 Speaker Mode。讓它一直接著充電器 — 語音播放比被動閒置更快耗電。
 
@@ -394,6 +404,27 @@ Judge 分頁顯示當天的所有選手。點按一張卡片以輸入結果。
 - **⛔ Offline** — 已在此裝置上本機儲存；恢復連線後將自動同步。參見 [離線運作](#離線運作)。
 
 如果未顯示徽章，則表示未設定 AIDA 整合（該選手沒有 startId）— 在 Mock mode 中這是正常的。
+
+### Judge Calculator
+
+對於 Pool 的 discipline，應用程式內建了計算器，可幫你從原始量測值算出 RP，而無須心算。計算器位於 Judge 分頁 → 選手詳情表中，僅在相關的 discipline 才會出現。
+
+#### Pool Length
+
+在使用 Distance Calc 之前，必須先設定 **Pool Length（m）**。在賽事 **Setup** 中設定它 — 僅 Pool 與 Team 類型的賽事可用（Depth 不適用）。如果未設定 pool length，dynamic 的距離計算器將無法換算 lap 數。
+
+#### Distance Calc（DYN / DYNB / DNF）
+
+對於 dynamic 的 discipline，點按選手詳情表中的 📏 尺（ruler）按鈕。輸入完成的 **完整 lap 數**，再加上最後的 **部分距離（m）**。結果為 `lap 數 × Pool Length + 部分距離`。點按 **Fill RP** 即可將算得的距離自動填入 RP 欄位。
+
+#### STA Average Calc（STA）
+
+對於 STA，點按 ⏱ 計時器按鈕。輸入兩位裁判各自量測的時間（mm:ss）。應用程式會取兩者的平均（四捨五入到最接近的秒），再以 **Fill RP** 將其填入 RP。
+
+#### 注意事項
+
+- 如果算得的 **RP 小於 AP**，White 卡會自動停用 — 表現不及 AP 不能給 White。
+- Depth 的 discipline（CWT / CWTB / FIM / CNF）沒有計算器 — 請手動輸入 RP。
 
 ---
 
@@ -485,6 +516,12 @@ protest 狀態變為 **Pending** — 等待 jury。
 - **Reject** / **Withdraw** — 結果維持不變。
 
 當 protest 仍處於 **Awaiting signature** 時無法裁決 — 選手必須先簽名。
+
+### Jury 投票
+
+裁決可採用 **匿名 jury 投票**：Judge 與 Main Judge 各自投下 **Accept** 或 **Reject**。投票是匿名的 — 不會顯示誰投了什麼，只顯示各自的票數合計。
+
+如果票數相同，由 **Main Judge** 投出決定性（deciding）的一票來定案。最終的裁決表單需要 **Jury 簽名** 才能完成。
 
 ### 刪除 protest
 

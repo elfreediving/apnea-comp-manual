@@ -335,6 +335,12 @@ Cues before OT:
 
 Cues during the start window (after OT): **"plus one"** at +1 s, then the elapsed seconds are called as the window runs out — up to the discipline's limit — ending with **"start cancelled"** if the athlete has not started by the end of the window.
 
+### Voice Announce
+
+The automatic countdown above is tied to each OT. For a one-off manual announcement, tap the **Announce** button on the Start List. Enter how many minutes before OT you want to call, and the device speaks *"N minutes to Official Top"* once, using the device's text-to-speech.
+
+This is separate from the automatic countdown cues — it is a single spoken announcement you trigger by hand. It speaks in the device language (English, 한국어, 日本語, 简体中文, or 繁體中文).
+
 ### Mute button
 
 > ![Mute toggle on Start List](images/start-list-mute.png)
@@ -357,6 +363,8 @@ Speaker Mode turns the device into a **dedicated countdown announcer** — perfe
 - Mute is forced off (cannot be muted accidentally).
 - The screen stays awake (no auto-lock).
 - A PIN is required to exit Speaker Mode, so a curious bystander cannot accidentally close it.
+
+**Keeps speaking in the background.** In Speaker Mode the voice — both the countdown cues and the manual Announce — keeps playing even when the app is sent to the background or the screen is locked. On iOS this is held open by a silent keep-alive track; on Android by a foreground-service notification (*"Start list countdown active"*). So the venue loudspeaker keeps announcing even if the phone locks itself. This applies in Speaker Mode only.
 
 **To enable**: open the role / profile menu → **Speaker Mode** → set a 4-digit PIN.
 
@@ -394,6 +402,34 @@ After saving you will see a small badge on the athlete card:
 - **⛔ Offline** — saved locally on this device; will sync automatically once you are back online. See [Offline operation](#offline-operation).
 
 If no badge is shown, AIDA integration is not configured (no startId for that athlete) — that is normal in Mock mode.
+
+---
+
+## Judge Calculator
+
+To save the judge from working out a distance or a static average by hand, the Judge tab has small calculators built into the athlete detail sheet. They compute the RP for you and write it straight into the result.
+
+### Pool Length
+
+Distance calculations need to know how long the pool is. Set it once in the event **Setup** as **Pool Length (m)**. It is available for **Pool** and **Team** event types only — Depth events do not have it. Without a pool length the Distance Calc cannot run.
+
+### Distance Calc (DYN / DYNB / DNF)
+
+For the dynamic disciplines, open the athlete in **Judge** → detail sheet → tap the 📏 ruler button.
+
+1. Enter the number of completed laps.
+2. Enter the partial distance (m) of the final, incomplete lap.
+3. The result = laps × Pool Length + partial distance.
+4. Tap **Fill RP** to write the total into the RP field.
+
+### STA Average Calc (STA)
+
+For static, tap the ⏱ timer button in the detail sheet. Enter the time measured by each of the two judges (mm:ss). The app averages them (rounded to the nearest whole second) and **Fill RP** writes the average into the RP field.
+
+### Notes
+
+- If the calculated RP is below the athlete's AP, the **White** card is disabled automatically — an under-AP performance cannot be a White card.
+- Depth disciplines (CWT, CWTB, FIM, CNF) have no calculator — enter the RP (depth) by hand.
 
 ---
 
@@ -485,6 +521,12 @@ Open **More → Protests** (Organizer / Main Judge / Judge). The list groups pro
 - **Reject** / **Withdraw** — the result stands.
 
 A protest cannot be decided while it is still **Awaiting signature** — the athlete must sign first.
+
+### Protest Voting
+
+The jury decides by an **anonymous vote**. Each Judge and Main Judge casts **Accept** or **Reject**. The vote is anonymous — who voted which way is not shown, only the running tally of each side.
+
+If the vote is tied, the **Main Judge** casts the deciding (casting) vote to break it. The final decision form still requires the jury's signature before it is recorded.
 
 ### Deleting a protest
 

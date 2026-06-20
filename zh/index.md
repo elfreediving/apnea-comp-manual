@@ -335,6 +335,12 @@ OT 之前的提示：
 
 出发窗口期间（OT 之后）的提示：在 +1 秒时 **「plus one」**，随后随着窗口走完会报出经过的秒数 — 直到该 discipline 的上限 — 如果选手在窗口结束前仍未出发，则以 **「start cancelled」** 结束。
 
+### 语音播报（Announce）
+
+Start List 上有一个 **Announce（语音播报）** 按钮。点按它，输入「距 OT 还有几分钟」的分钟数，设备的 text-to-speech 便会朗读 **「N minutes to Official Top」**（使用设备语言）。
+
+这是一次手动的单次播报，与自动倒计时提示（语音倒计时）相互独立。它会按设备语言（en / ko / ja / zh / zh_TW）发声。
+
 ### 静音按钮
 
 > ![Start List 上的静音切换](../images/start-list-mute.png)
@@ -357,6 +363,8 @@ Speaker Mode 将设备变成一个 **专用倒计时播报器** — 非常适合
 - 静音被强制关闭（不会被意外静音）。
 - 屏幕保持常亮（无自动锁定）。
 - 退出 Speaker Mode 需要 PIN，因此好奇的旁观者不会意外关闭它。
+
+**后台播放** — 在 Speaker Mode 下，语音（倒计时提示 + 语音播报）即使在你将应用切到后台或锁屏后仍会继续播放。iOS 通过保持一条静音的 keep-alive 音轨来实现；Android 使用一条前台服务通知（**「Start list countdown active」**）。这样即便手机锁屏，场馆的扬声器也会持续播报。此行为仅限 Speaker Mode。
 
 **要启用**：打开角色 / 个人资料菜单 → **Speaker Mode** → 设置一个 4 位 PIN。
 
@@ -394,6 +402,28 @@ Judge 标签页显示当天的所有选手。点按一张卡片以输入结果�
 - **⛔ Offline** — 已在此设备上本地保存；恢复在线后将自动同步。参见 [离线运行](#离线运行)。
 
 如果未显示徽章，则表示未配置 AIDA 集成（该选手没有 startId）— 在 Mock mode 中这是正常的。
+
+---
+
+## Judge Calculator（判定计算器）
+
+为减少现场算术，应用为 Pool 项目内置了 RP 计算器。打开一张选手卡片，在选手详情表中即可找到对应工具。计算结果可通过 **Fill RP** 一键写入 RP 字段。
+
+### Pool Length（泳池长度）
+
+在赛事 **Setup** 中设置 **Pool Length（m）**。该设置仅出现在 **Pool 和 Team** 类型的赛事中（Depth 不适用）。使用 Distance Calc 时必须先填写它。
+
+### Distance Calc（DYN / DYNB / DNF）
+
+在 **Judge** 标签页 → 选手详情表 → 点按 📏 尺子（ruler）按钮。输入完成的 lap 数量以及最后一段的零头 m 数。结果 = lap × Pool Length + 零头距离。点按 **Fill RP** 将其写入 RP。
+
+### STA Average Calc（STA）
+
+在选手详情表中点按 ⏱ 计时器按钮。输入两位裁判各自测得的时间（mm:ss）。应用取两者平均（四舍五入到最接近的秒），然后点按 **Fill RP** 写入。
+
+> 如果计算出的 **RP 小于 AP**，White 卡会被自动禁用 — Under AP 的表现不能给 White。
+>
+> Depth 项目（CWT、CWTB、FIM、CNF）没有计算器 — 请手动输入 RP。
 
 ---
 
@@ -485,6 +515,12 @@ protest 状态变为 **Pending** — 等待 jury。
 - **Reject** / **Withdraw** — 结果维持不变。
 
 当 protest 仍处于 **Awaiting signature** 时无法裁决 — 选手必须先签名。
+
+### Protest 投票
+
+jury 通过 **匿名投票** 作出裁决：Judge 与 Main Judge 各自投 **Accept** 或 **Reject**。投票是匿名的 — 不会公开谁投了什么，只显示各项的计票数。
+
+如果出现平票，由 **Main Judge** 以一票决定性（deciding）投票打破僵局。最终裁决表单要求 **Jury 签名**。
 
 ### 删除 protest
 
