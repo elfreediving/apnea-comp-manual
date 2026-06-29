@@ -167,6 +167,16 @@
 3. 앱 → Events → **Enter invite code** → 코드 붙여넣기.
 4. 앱이 코드를 검증하고 계정을 연결.
 
+### broadcast(활성화) 코드 — 가장 빠른 참여 방법
+
+Organizer는 하나의 **broadcast 코드**(**Athlete code**로 표시됨)를 켤 수 있으며, 어떤 선수든 이 코드로 이벤트에 직접 참여할 수 있습니다 — 아직 AIDA start list가 없거나, start list에 올라 있지 않은 선수에게 유용합니다.
+
+**Organizer:** 이벤트 열기 → **Setup** → *Athlete code* 옆의 초록색 **+**를 탭해 코드를 생성한 뒤 **복사**해서 공유합니다(채팅, 종이, 프로젝터). 전원 아이콘을 탭하면 언제든 끌 수 있습니다.
+
+**선수(Athlete):** 앱 열기 → Events → **Enter code** → broadcast 코드를 붙여넣습니다. 참여하면 start list와 결과를 조회하고 본인 서류를 제출할 수 있습니다.
+
+> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+
 ### AIDA에서 나 찾기
 
 > ![Find me on AIDA 검색](../images/aida-find-me.png)

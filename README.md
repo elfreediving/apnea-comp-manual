@@ -167,6 +167,16 @@ If two athletes share the same name, automatic matching cannot decide which one 
 3. You open the app → Events → **Enter invite code** → paste it.
 4. The app verifies the code and links your account.
 
+### Broadcast (activation) code — the quickest way to join
+
+The Organizer can turn on a single **broadcast code** (shown as the **Athlete code**) that any athlete can use to join the event directly — useful when there is no AIDA start list yet, or for athletes who are not on it.
+
+**Organizer:** open the event → **Setup** → tap the green **+** next to *Athlete code* to generate it, then **copy** and share it (chat, paper, projector). Tap the power icon to turn it off at any time.
+
+**Athlete:** open the app → Events → **Enter code** → paste the broadcast code. Once joined you can view the start list and results and submit your documents.
+
+> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+
 ### Find me on AIDA
 
 > ![Find me on AIDA search](images/aida-find-me.png)

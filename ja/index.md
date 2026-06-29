@@ -167,6 +167,16 @@ invite code は **Edit Event** に表示されます。普段使うチャネル�
 3. あなたはアプリを開く → Events → **Enter invite code** → 貼り付けます。
 4. アプリがコードを検証し、アカウントをリンクします。
 
+### broadcast（参加用）コード — 最も手早く参加する方法
+
+Organizer は、どの選手でもイベントに直接参加できる単一の **broadcast コード**（**Athlete code** として表示）を有効にできます — まだ AIDA の start list がない場合や、start list に載っていない選手の参加に便利です。
+
+**Organizer:** イベントを開く → **Setup** → *Athlete code* の隣にある緑の **+** をタップして生成し、**コピー**して共有します（チャット、紙、プロジェクター）。電源アイコンをタップすれば、いつでもオフにできます。
+
+**Athlete:** アプリを開く → Events → **Enter code** → broadcast コードを貼り付けます。参加すると、start list と結果を確認でき、書類を提出できます。
+
+> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+
 ### Find me on AIDA
 
 > ![Find me on AIDA 検索](../images/aida-find-me.png)

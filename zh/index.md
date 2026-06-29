@@ -167,6 +167,16 @@ invite code 显示在 **Edit Event** 中。通过你常用的渠道（聊天、�
 3. 你打开应用 → Events → **Enter invite code** → 粘贴它。
 4. 应用验证代码并关联你的账户。
 
+### broadcast（激活）code — 加入的最快方式
+
+Organizer 可以开启一个 **broadcast code**（在界面上显示为 **Athlete code**），任何选手都能用它直接加入赛事 — 当还没有 AIDA start list 时，或对于不在名单上的选手，这非常有用。
+
+**Organizer：** 打开赛事 → **Setup** → 点按 *Athlete code* 旁边的绿色 **+** 来生成它，然后 **复制** 并分享（聊天、纸张、投影）。随时点按电源图标即可将其关闭。
+
+**Athlete：** 打开应用 → Events → **Enter code** → 粘贴 broadcast code。加入后你即可查看 start list 和结果，并提交你的文档。
+
+> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+
 ### Find me on AIDA
 
 > ![Find me on AIDA 搜索](../images/aida-find-me.png)
