@@ -22,7 +22,7 @@ If you only have five minutes, read **Quick Start** below and the FAQ at the bot
 10. [Check-in](#check-in)
 11. [Start List & Speaker Mode](#start-list--speaker-mode)
 12. [Judging results](#judging-results)
-13. [Penalties (Rulebook 17.7)](#penalties-rulebook-177)
+13. [Penalties (Rulebook 17.8)](#penalties-rulebook-178)
 14. [Protests](#protests)
 15. [Re-swim & Opener](#re-swim--opener)
 16. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
@@ -201,6 +201,27 @@ Notification text arrives in your chosen app language. You can turn notification
 
 ---
 
+## Documents (Consent Forms)
+
+Many events require athletes to submit AIDA consent forms before competing. Open **My Info → Documents**.
+
+- **Required forms** — Competition Entry, Image Rights consent, and Liability waiver. A **Medical Statement** is optional but often requested.
+- **Two ways to submit** — *Fill in app* (type the fields and sign on screen; a PDF is generated for you) or *Upload photo* of a signed paper copy.
+- **Medical Statement** — valid for one year from its issue date. Save it on your profile (Edit Profile → Medical Statement) to reuse it across events. If you upload a photo, enter the issue date shown on the certificate. A pressure injury or black-out *after* the issue date makes the certificate invalid — submit a new one.
+- **Deadline** — if mandatory forms are missing by the day before the event, you receive a push reminder listing what is missing.
+
+**For staff (Organizer / Main Judge):** open **More → Documents** to review each athlete's submission status, open files, and **download everything as a ZIP** (folders by document type). When an athlete declares an injury or black-out, the medical statement is flagged for **manual verification** — confirm the certificate in person, then tap *Mark verified*. Submitted documents are kept for 15 days after the event, then deleted.
+
+![Athlete — My Info → Documents](images/documents-athlete-list.png)
+
+![Fill in app and sign](images/documents-fill-sign.png)
+
+![Medical Statement saved on profile](images/documents-medical-profile.png)
+
+![Staff — Documents status & manual-check](images/documents-staff-status.png)
+
+![Staff — verify medical statement](images/documents-staff-verify.png)
+
 ## Setup: athletes, lines, and OTs
 
 > ![Setup screen layout](images/setup-screen.png)
@@ -230,6 +251,8 @@ Tap **Advanced Setup** to expand more options for fine-grained control:
 
 - **Per-discipline lines** (Pool only) — assign a different number of lanes to each discipline. For example, STA uses 4 lanes but DYN/DNF use only 2 lanes. The app generates separate sub-schedules per discipline and stitches them together.
 - **Cross-discipline lane carry-over** — when the previous discipline ends mid-line (e.g. STA ends on lane 3 with 4 lanes), the next discipline can either restart from lane 1 (default) or continue from lane 4. Useful when judges stay on the same lane across disciplines.
+
+- **Custom Intervals** — beyond the base interval, give different intervals to ranges of athletes by start order. Example: #1–#10 → 10 min, #11–#20 → 8 min, #21–#30 → 7 min. Tap **Add interval**, set *From order / To order / Interval*, then **Done** — OTs recompute and save automatically. Per-day; ranges must not overlap and must stay within the athlete count; with no ranges the base interval applies to everyone. If a manual break exists for the day, the OT recompute is skipped (same as Save Configuration) to protect manually adjusted OTs.
 
 ### Line assignment
 
@@ -388,7 +411,7 @@ The Judge tab shows all athletes for the current day. Tap a card to enter the re
 
 1. **RP** — realised performance (time for static, distance for dynamic, depth for depth).
 2. **Card** — White (clean), Yellow (penalty), or Red (DQ).
-3. **Penalty reasons** — required when a card other than White is selected. See [Penalties](#penalties-rulebook-177).
+3. **Penalty reasons** — required when a card other than White is selected. See [Penalties](#penalties-rulebook-178).
 4. **Start offset** — seconds early (negative) or late (positive). Used for the start-window penalty calculation.
 5. **REMARKS** — required for certain reasons (BO, Other Penalty, DQ Other, etc.). The app pre-fills a template; complete the missing detail.
 6. Tap **Save Result**.
@@ -433,9 +456,9 @@ For static, tap the ⏱ timer button in the detail sheet. Enter the time measure
 
 ---
 
-## Penalties (Rulebook 17.7)
+## Penalties (Rulebook 17.8)
 
-The app follows AIDA Rulebook section 17.7. Reasons are grouped by card colour.
+The app follows AIDA Rulebook section 17.8. Reasons are grouped by card colour.
 
 ### 🟨 Yellow card reasons
 
@@ -484,7 +507,7 @@ Yellow card on its own also supports multi-select (e.g. Early Start + Grab). Yel
 
 ## Protests
 
-A protest is a formal challenge to a result, filed under AIDA Rulebook 17.7. Apnea Comp tracks the whole flow — filing, the athlete's signature, the jury's decision, and any change to the result.
+A protest is a formal challenge to a result, filed under AIDA Rulebook 17.8. Apnea Comp tracks the whole flow — filing, the athlete's signature, the jury's decision, and any change to the result.
 
 **Every protest ends with the athlete's signature**, even when a staff member starts it on the athlete's behalf.
 
@@ -753,11 +776,22 @@ The **Rewards** tab (also a tab in Athlete Mode) ranks athletes by points, group
 
 - **Day chips** — Total, Day 1, Day 2, … to scope the standings.
 - **Include yellow card scores** toggle.
-- **Tiebreak** (⚙ top-right) — drag to reorder the tiebreak rules. The AIDA default is: total points → fewer Red cards → fewer Yellow cards → more White cards.
+- **Tiebreak** (⚙ top-right) — drag to reorder the tiebreak rules. The AIDA default (Rulebook §4.2.16) is: total points → **smallest AP−RP difference** → fewer Red → fewer Yellow → more White cards. Athletes who remain exactly tied share the same place and the next place is skipped (**Olympic placing**, e.g. two 1st → next is 3rd). Depth RP is entered in whole meters (§4.1.22.1).
 - Openers and invalidated (re-swum) entries are excluded from rankings; everyone still appears in Results.
 - **Export CSV** — the ↓ icon shares a UTF-8 CSV (opens correctly in Excel / Numbers in every language) reflecting the current Day / Yellow / Tiebreak settings.
 
 ---
+
+### Records (WR/CR/NR)
+
+Mark and confirm World / Continental / National record attempts.
+
+1. **Mark the event** — when creating or editing an event, toggle **World Record** and / or **Continental** under **Record Attempts**. A 🏅 badge then shows on the event card and the Results header.
+2. **Check records** — on the **Results** tab, tap **Check WR/CR/NR**. For each white-card athlete the app queries the AIDA official records (by nationality, discipline, gender) and suggests WR / CR / NR. Needs network — entries it cannot fetch are skipped.
+3. **Confirm** *(Organizer / Main Judge)* — a suggestion shows as a dashed badge (e.g. "WR?"). Tap it to confirm the level or clear it. Confirmed records show as a solid badge and are included in the CSV export.
+
+> Only white-card (valid) performances qualify. A performance with any penalty cannot be a World or Continental Record (Rulebook §10.2). The suggestion compares the realized performance (RP) to the current record; the judge makes the final decision.
+
 
 ## Display & Language
 

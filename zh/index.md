@@ -22,7 +22,7 @@
 10. [Check-in](#check-in)
 11. [Start List & Speaker Mode](#start-list--speaker-mode)
 12. [输入判定结果](#输入判定结果)
-13. [罚分（Rulebook 17.7）](#罚分rulebook-177)
+13. [罚分（Rulebook 17.8）](#罚分rulebook-178)
 14. [Protests（申诉）](#protests申诉)
 15. [Re-swim & Opener](#re-swim--opener)
 16. [日程调整（OT Delay）](#日程调整ot-delay)
@@ -201,6 +201,29 @@ Athlete Mode 有四个标签页：**My Info**、**Start List**、**Results** 和
 
 ---
 
+## Documents (同意书)
+
+许多赛事要求选手在参赛前提交 AIDA 同意书。打开 **My Info → Documents**。
+
+- **必需表单** — Competition Entry、Image Rights 同意书和 Liability 免责声明。**Medical Statement** 为可选项，但通常会被要求。
+- **两种提交方式** — *在应用内填写*（输入各字段并在屏幕上签名，系统会为你生成 PDF），或*上传*已签名的纸质副本*照片*。
+- **Medical Statement** — 自签发之日起一年内有效。将其保存到个人资料中（Edit Profile → Medical Statement），即可在多个赛事中重复使用。如果上传照片，请输入证书上显示的签发日期。签发日期*之后*发生的压力性损伤或晕厥会使证书失效——请重新提交一份。
+- **截止时间** — 如果到赛事前一天仍缺少必需表单，你会收到一条列出缺失项的推送提醒。
+
+**面向工作人员 (Organizer / Main Judge):** 打开 **More → Documents**，可查看每位选手的提交状态、打开文件，并**将全部内容下载为 ZIP**（按文档类型分文件夹）。当选手申报受伤或晕厥时，该 medical statement 会被标记为**人工核验**——当面确认证书后，点按 *Mark verified*。已提交的文档在赛事结束后保留 15 天，之后删除。
+
+---
+
+![Athlete — My Info → Documents](images/documents-athlete-list.png)
+
+![Fill in app and sign](images/documents-fill-sign.png)
+
+![Medical Statement saved on profile](images/documents-medical-profile.png)
+
+![Staff — Documents status & manual-check](images/documents-staff-status.png)
+
+![Staff — verify medical statement](images/documents-staff-verify.png)
+
 ## Setup：选手、Line 和 OT
 
 > ![Setup 界面布局](../images/setup-screen.png)
@@ -230,6 +253,8 @@ Setup 是你决定当天日程的地方：每位选手在哪条 line 游泳、�
 
 - **按 discipline 设置 line（仅 Pool）** — 为每个 discipline 分配不同数量的泳道。例如，STA 使用 4 条泳道，但 DYN/DNF 仅使用 2 条泳道。应用会为每个 discipline 生成独立的子日程，并将它们拼接在一起。
 - **跨 discipline 的泳道延续** — 当上一个 discipline 在 line 中途结束（例如 STA 在 4 条泳道中的第 3 条结束）时，下一个 discipline 既可以从泳道 1 重新开始（默认），也可以从泳道 4 继续。当裁判在不同 discipline 之间留在同一条泳道时很有用。
+
+- **Custom Intervals（单独设置间隔）** — 在基本间隔之外，按出发顺序号区间设置不同间隔。例如：#1–#10 → 10 分钟，#11–#20 → 8 分钟，#21–#30 → 7 分钟。点按 **Add interval（添加间隔）** → 设置 *起始顺序 / 结束顺序 / 间隔* → **Done**。OT 会自动重新计算并保存。此为按日设置；区间不可重叠且需在选手数以内；没有区间则全部应用基本间隔。若当天存在手动休息，则跳过 OT 重算（与 Save Configuration 相同 — 保护手动调整的 OT）。
 
 ### Line 分配
 
@@ -388,7 +413,7 @@ Judge 标签页显示当天的所有选手。点按一张卡片以输入结果�
 
 1. **RP** — 实际表现（static 为时间，dynamic 为距离，depth 为深度）。
 2. **卡片** — White（干净）、Yellow（罚分）或 Red（DQ）。
-3. **罚分原因** — 选择 White 以外的卡片时必填。参见 [罚分](#罚分rulebook-177)。
+3. **罚分原因** — 选择 White 以外的卡片时必填。参见 [罚分](#罚分rulebook-178)。
 4. **Start offset** — 提前（负数）或延迟（正数）的秒数。用于出发窗口罚分的计算。
 5. **REMARKS** — 对于某些原因（BO、Other Penalty、DQ Other 等）必填。应用会预填一个模板；请补全缺失的细节。
 6. 点按 **Save Result**。
@@ -427,9 +452,9 @@ Judge 标签页显示当天的所有选手。点按一张卡片以输入结果�
 
 ---
 
-## 罚分（Rulebook 17.7）
+## 罚分（Rulebook 17.8）
 
-应用遵循 AIDA Rulebook 第 17.7 节。原因按卡片颜色分组。
+应用遵循 AIDA Rulebook 第 17.8 节。原因按卡片颜色分组。
 
 ### 🟨 Yellow 卡原因
 
@@ -478,7 +503,7 @@ Yellow 卡单独也支持多选（例如 Early Start + Grab）。Yellow 卡不�
 
 ## Protests（申诉）
 
-protest 是根据 AIDA Rulebook 17.7 提出的对某一结果的正式异议。Apnea Comp 会追踪整个流程 — 提交、选手的签名、jury 的裁决，以及对结果的任何更改。
+protest 是根据 AIDA Rulebook 17.8 提出的对某一结果的正式异议。Apnea Comp 会追踪整个流程 — 提交、选手的签名、jury 的裁决，以及对结果的任何更改。
 
 **每个 protest 都以选手的签名结束**，即使是工作人员代选手发起的也是如此。
 
@@ -747,11 +772,22 @@ Edit Event → 粘贴两个值 → Test Connection → Save。应用会将 token
 
 - **Day 标签** — Total、Day 1、Day 2 … 以界定排名范围。
 - **Include yellow card scores** 开关。
-- **Tiebreak**（右上 ⚙） — 拖动以重新排列 tiebreak 规则。AIDA 默认为：total points → Red 卡更少 → Yellow 卡更少 → White 卡更多。
+- **Tiebreak**（右上 ⚙） — 拖动以重新排列 tiebreak 规则。AIDA 默认（Rulebook §4.2.16）为：total points → **AP−RP 差最小** → Red 更少 → Yellow 更少 → White 更多。完全相同者共享同一名次，下一名次跳过（**奥林匹克并列**，例：两个第 1 → 下一个是第 3）。深度 RP 以整数米输入（§4.1.22.1）。
 - Opener 和 invalidated（已 re-swim）的条目会被排除在排名之外；所有人仍会出现在 Results 中。
 - **Export CSV** — ↓ 图标分享一份 UTF-8 CSV（在所有语言中都能在 Excel / Numbers 中正确打开），反映当前的 Day / Yellow / Tiebreak 设置。
 
 ---
+
+### Records (WR/CR/NR) — 记录
+
+标记并确认世界 / 大洲 / 国家记录挑战。
+
+1. **标记比赛** — 在创建或编辑比赛时，在 **Record Attempts** 中开启 **World Record** / **Continental**。之后比赛卡片和 Results 顶部会显示 🏅 徽章。
+2. **检查记录** — 在 **Results** 标签点按 **Check WR/CR/NR**。对每位白卡选手，应用会按国籍、项目、性别查询 AIDA 官方记录并建议 WR / CR / NR。需要联网 — 无法获取的会跳过。
+3. **确认** *(Organizer / Main Judge)* — 建议显示为虚线徽章（如「WR?」）。点按以确认等级或清除。已确认的记录显示为实线徽章，并包含在 CSV 导出中。
+
+> 仅白卡（有效）成绩可作为记录。带罚分的成绩不能成为世界或大洲记录（Rulebook §10.2）。建议是将实现成绩（RP）与当前记录比较，最终由裁判决定。
+
 
 ## 显示 & 语言
 

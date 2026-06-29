@@ -22,7 +22,7 @@
 10. [Check-in](#check-in)
 11. [Start List & Speaker Mode](#start-list--speaker-mode)
 12. [判定結果の入力](#判定結果の入力)
-13. [ペナルティ（Rulebook 17.7）](#ペナルティrulebook-177)
+13. [ペナルティ（Rulebook 17.8）](#ペナルティrulebook-178)
 14. [Protests（異議申し立て）](#protests異議申し立て)
 15. [Re-swim & Opener](#re-swim--opener)
 16. [スケジュール調整（OT Delay）](#スケジュール調整ot-delay)
@@ -201,6 +201,29 @@ Athlete Mode には 4 つのタブがあります。**My Info**、**Start List**
 
 ---
 
+## Documents (同意書)
+
+多くの大会では、出場前に選手がAIDAの同意書を提出する必要があります。**My Info → Documents**を開きます。
+
+- **必須フォーム** — Competition Entry、Image Rights同意書、Liability免責同意書。**Medical Statement**は任意ですが、求められることが多いです。
+- **提出方法は2通り** — *アプリで記入*（項目を入力して画面上で署名すると、PDFが自動生成されます）または、署名済みの紙のコピーの*写真をアップロード*。
+- **Medical Statement** — 発行日から1年間有効です。プロフィールに保存（Edit Profile → Medical Statement）すれば、複数の大会で再利用できます。写真をアップロードする場合は、証明書に記載された発行日を入力してください。発行日*以降*に圧迫障害やブラックアウトが発生した場合、証明書は無効になります。新しいものを提出してください。
+- **締め切り** — 大会前日までに必須フォームが未提出の場合、不足している項目を知らせるプッシュ通知が届きます。
+
+**スタッフ向け (Organizer / Main Judge):** **More → Documents**を開くと、各選手の提出状況を確認し、ファイルを開き、**すべてをZIPでダウンロード**できます（文書タイプごとのフォルダ）。選手が負傷やブラックアウトを申告すると、そのmedical statementは**手動確認**用にフラグが立てられます。証明書を直接確認したうえで*Mark verified*をタップしてください。提出された文書は大会終了後15日間保管され、その後削除されます。
+
+---
+
+![Athlete — My Info → Documents](images/documents-athlete-list.png)
+
+![Fill in app and sign](images/documents-fill-sign.png)
+
+![Medical Statement saved on profile](images/documents-medical-profile.png)
+
+![Staff — Documents status & manual-check](images/documents-staff-status.png)
+
+![Staff — verify medical statement](images/documents-staff-verify.png)
+
 ## Setup: 選手、Line、OT
 
 > ![Setup 画面のレイアウト](../images/setup-screen.png)
@@ -230,6 +253,8 @@ Setup は、その日のスケジュールを決める場所です。どの選�
 
 - **discipline ごとの line（Pool のみ）** — discipline ごとに異なるレーン数を割り当てます。例えば、STA は 4 レーン使用ですが、DYN/DNF は 2 レーンのみ使用します。アプリは discipline ごとに別々のサブスケジュールを生成し、つなぎ合わせます。
 - **discipline 間のレーン引き継ぎ** — 前の discipline が line の途中で終わったとき（例: STA が 4 レーン中レーン 3 で終了）、次の discipline はレーン 1 から再開する（既定）か、レーン 4 から続行するかを選べます。審判が discipline をまたいで同じレーンに留まる場合に便利です。
+
+- **Custom Intervals（インターバル個別設定）** — 基本インターバルに加えて、スタート順番の範囲ごとに異なるインターバルを設定します。例：#1–#10 → 10分、#11–#20 → 8分、#21–#30 → 7分。**Add interval（インターバルを追加）** をタップ → *開始順番 / 終了順番 / インターバル* を設定 → **Done**。OT は自動的に再計算・保存されます。日ごとの設定で、範囲は重複せず選手数以内である必要があります。範囲がなければ全員に基本インターバルを適用。その日に手動の休憩がある場合、OT の再計算はスキップされます（Save Configuration と同じ — 手動調整した OT を保護）。
 
 ### Line の割り当て
 
@@ -392,7 +417,7 @@ Judge タブは当日のすべての選手を表示します。カードをタ�
 
 1. **RP** — 実現したパフォーマンス（static は時間、dynamic は距離、depth は深度）。
 2. **カード** — White（クリーン）、Yellow（ペナルティ）、または Red（DQ）。
-3. **ペナルティ理由** — White 以外のカードを選んだときに必須。[ペナルティ](#ペナルティrulebook-177) を参照。
+3. **ペナルティ理由** — White 以外のカードを選んだときに必須。[ペナルティ](#ペナルティrulebook-178) を参照。
 4. **Start offset** — 早い（マイナス）または遅い（プラス）秒数。スタートウィンドウのペナルティ計算に使われます。
 5. **REMARKS** — 特定の理由（BO、Other Penalty、DQ Other など）に必須。アプリがテンプレートを事前入力するので、足りない詳細を補ってください。
 6. **Save Result** をタップします。
@@ -441,9 +466,9 @@ Judge 画面 → 選手詳細シート → タイマーボタンをタップし�
 
 ---
 
-## ペナルティ（Rulebook 17.7）
+## ペナルティ（Rulebook 17.8）
 
-アプリは AIDA Rulebook の 17.7 セクションに従います。理由はカードの色でグループ化されています。
+アプリは AIDA Rulebook の 17.8 セクションに従います。理由はカードの色でグループ化されています。
 
 ### 🟨 Yellow カードの理由
 
@@ -492,7 +517,7 @@ Yellow カード単独でも複数選択をサポートします（例: Early St
 
 ## Protests（異議申し立て）
 
-protest は、AIDA Rulebook 17.7 に基づいて結果に正式に異議を申し立てるものです。Apnea Comp は、申し立て、選手の署名、jury の決定、結果へのあらゆる変更まで、全フローを追跡します。
+protest は、AIDA Rulebook 17.8 に基づいて結果に正式に異議を申し立てるものです。Apnea Comp は、申し立て、選手の署名、jury の決定、結果へのあらゆる変更まで、全フローを追跡します。
 
 **すべての protest は選手の署名で終わります**。スタッフのメンバーが選手に代わって開始した場合でも同様です。
 
@@ -761,11 +786,22 @@ token を `test` または `demo` に設定する（または両方のフィー�
 
 - **Day チップ** — Total、Day 1、Day 2 … で順位の範囲を絞ります。
 - **Include yellow card scores** トグル。
-- **Tiebreak**（右上 ⚙） — ドラッグして tiebreak のルールを並べ替えます。AIDA の既定は: total points → Red カードが少ない順 → Yellow カードが少ない順 → White カードが多い順。
+- **Tiebreak**（右上 ⚙） — ドラッグして tiebreak のルールを並べ替えます。AIDA の既定（Rulebook §4.2.16）は: total points → **AP−RP 差が最小** → Red が少ない順 → Yellow が少ない順 → White が多い順。完全に同点の選手は同じ順位を共有し、次の順位は飛ばされます（**オリンピック方式**、例：1位が2人 → 次は3位）。深度の RP は整数メートルで入力します（§4.1.22.1）。
 - Opener と invalidated（re-swim された）エントリーは順位から除外されます。全員が引き続き Results に表示されます。
 - **Export CSV** — ↓ アイコンが UTF-8 CSV を共有します（すべての言語で Excel / Numbers で正しく開きます）。現在の Day / Yellow / Tiebreak の設定を反映します。
 
 ---
+
+### Records (WR/CR/NR) — 記録
+
+世界 / 大陸 / 国の記録挑戦を表示・確定します。
+
+1. **大会を表示** — 大会の作成・編集時に **Record Attempts** で **World Record** / **Continental** を有効にします。すると大会カードと Results の上部に 🏅 バッジが表示されます。
+2. **記録を確認** — **Results** タブで **Check WR/CR/NR** をタップします。white card の選手ごとに AIDA 公式記録（国籍・種目・性別）を照会し、WR / CR / NR を提案します。ネットワークが必要 — 取得できないものはスキップされます。
+3. **確定** *(Organizer / Main Judge)* — 提案は破線のバッジ（例：「WR?」）で表示されます。タップしてレベルを確定または解除します。確定した記録は実線のバッジで表示され、CSV エクスポートに含まれます。
+
+> white card（有効）の記録のみが対象です。ペナルティのある記録は世界・大陸記録にはなりません（Rulebook §10.2）。提案は実現記録（RP）を現在の記録と比較したもので、最終判断は審判が行います。
+
 
 ## 表示 & 言語
 

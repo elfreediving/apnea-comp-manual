@@ -22,7 +22,7 @@
 10. [체크인](#체크인)
 11. [Start List & Speaker Mode](#start-list--speaker-mode)
 12. [판정 결과 입력](#판정-결과-입력)
-13. [페널티 (룰북 17.7)](#페널티-룰북-177)
+13. [페널티 (룰북 17.8)](#페널티-룰북-178)
 14. [이의제기 (Protest)](#이의제기-protest)
 15. [재경기 & Opener](#재경기--opener)
 16. [일정 조정 (OT Delay)](#일정-조정-ot-delay)
@@ -201,6 +201,29 @@
 
 ---
 
+## Documents (동의서)
+
+많은 대회에서 출전 전에 선수가 AIDA 동의서를 제출해야 합니다. **My Info → Documents**를 엽니다.
+
+- **필수 양식** — Competition Entry, Image Rights 동의서, Liability 면책 동의서. **Medical Statement**는 선택 사항이지만 자주 요구됩니다.
+- **제출 방법 2가지** — *앱에서 작성*(항목을 입력하고 화면에서 서명하면 PDF가 자동 생성됨) 또는 서명된 종이 사본의 *사진 업로드*.
+- **Medical Statement** — 발급일로부터 1년간 유효합니다. 프로필에 저장(Edit Profile → Medical Statement)하면 여러 대회에서 재사용할 수 있습니다. 사진을 업로드하는 경우 증명서에 표시된 발급일을 입력하세요. 발급일 *이후*에 압력 손상이나 블랙아웃이 발생하면 증명서는 무효가 되므로 새로 제출해야 합니다.
+- **마감** — 대회 전날까지 필수 양식이 누락되어 있으면 누락된 항목을 알리는 푸시 알림을 받습니다.
+
+**스태프용 (Organizer / Main Judge):** **More → Documents**를 열어 각 선수의 제출 상태를 확인하고, 파일을 열고, **전체를 ZIP으로 다운로드**할 수 있습니다(문서 유형별 폴더). 선수가 부상이나 블랙아웃을 신고하면 해당 medical statement는 **수동 확인** 대상으로 표시됩니다. 증명서를 직접 확인한 후 *Mark verified*를 탭하세요. 제출된 문서는 대회 종료 후 15일간 보관되며 이후 삭제됩니다.
+
+---
+
+![Athlete — My Info → Documents](images/documents-athlete-list.png)
+
+![Fill in app and sign](images/documents-fill-sign.png)
+
+![Medical Statement saved on profile](images/documents-medical-profile.png)
+
+![Staff — Documents status & manual-check](images/documents-staff-status.png)
+
+![Staff — verify medical statement](images/documents-staff-verify.png)
+
 ## Setup: 선수, 라인, OT
 
 > ![Setup 화면 레이아웃](../images/setup-screen.png)
@@ -230,6 +253,8 @@ Setup은 그날의 일정을 결정하는 곳입니다: 어느 선수가 어느 
 
 - **종목별 라인 수 (Per-discipline lines, Pool만)** — 종목마다 다른 라인 수 지정 가능. 예: STA는 4개 레인, DYN/DNF는 2개 레인. 앱이 종목별 하위 일정을 만든 후 이어 붙입니다.
 - **종목 간 라인 carry-over** — 이전 종목이 라인 중간에 끝났을 때 (예: STA가 4레인 중 3레인에서 끝남) 다음 종목을 1번 레인부터 다시 시작할지(기본값) 또는 4번 레인부터 이어갈지 선택. 같은 라인에서 종목을 이어가는 운영에 유용.
+
+- **Custom Intervals (인터벌 개별 지정)** — 기본 인터벌 외에, 시작 순서 번호 범위마다 다른 인터벌을 줍니다. 예: #1–#10 → 10분, #11–#20 → 8분, #21–#30 → 7분. **Add interval(인터벌 추가)** 탭 → *시작 순서 / 끝 순서 / 인터벌* 설정 → **Done**. OT가 자동 재계산·저장됩니다. Day별 설정이며, 범위는 겹치면 안 되고 선수 수 이내여야 합니다. 범위가 없으면 전체에 기본 인터벌 적용. 해당 Day에 수동 브레이크가 있으면 OT 재계산은 건너뜁니다(Save Configuration과 동일 — 수동 조정한 OT 보호).
 
 ### 라인 배정
 
@@ -400,7 +425,7 @@ Judge 탭은 현재 일자의 모든 선수를 표시합니다. 카드를 탭해
 
 1. **RP** — 실현 기록 (static: 시간, dynamic: 거리, depth: 깊이).
 2. **카드** — White (클린), Yellow (페널티), Red (DQ).
-3. **페널티 사유** — White 외 카드 선택 시 필수. [페널티](#페널티-룰북-177) 참조.
+3. **페널티 사유** — White 외 카드 선택 시 필수. [페널티](#페널티-룰북-178) 참조.
 4. **Start offset** — 빠른 출발 (음수) 또는 늦은 출발 (양수) 초. 출발 윈도우 페널티 계산에 사용.
 5. **REMARKS** — 특정 사유 (BO, Other Penalty, DQ Other 등)에 필수. 앱이 템플릿을 미리 채워주니 빠진 부분만 작성.
 6. **Save Result** 탭.
@@ -449,9 +474,9 @@ RP를 손으로 환산하는 대신, Pool / Team 대회에서는 앱의 내장 �
 
 ---
 
-## 페널티 (룰북 17.7)
+## 페널티 (룰북 17.8)
 
-앱은 AIDA Rulebook 17.7 섹션을 따릅니다. 사유는 카드 색상으로 그룹화됩니다.
+앱은 AIDA Rulebook 17.8 섹션을 따릅니다. 사유는 카드 색상으로 그룹화됩니다.
 
 ### 🟨 Yellow 카드 사유
 
@@ -500,7 +525,7 @@ Yellow 카드 단독도 다중 선택을 지원합니다 (예: Early Start + Gra
 
 ## 이의제기 (Protest)
 
-이의제기(protest)는 AIDA 룰북 17.7에 따라 결과에 정식으로 이의를 제기하는 절차입니다. Apnea Comp는 제출 → 선수 서명 → jury 결정 → 결과 수정까지 전 과정을 추적합니다.
+이의제기(protest)는 AIDA 룰북 17.8에 따라 결과에 정식으로 이의를 제기하는 절차입니다. Apnea Comp는 제출 → 선수 서명 → jury 결정 → 결과 수정까지 전 과정을 추적합니다.
 
 **모든 이의제기는 선수 서명으로 마무리됩니다** — 스태프가 선수를 대신해 시작하더라도 마찬가지입니다.
 
@@ -771,11 +796,22 @@ Edit Event → 두 값 입력 → Test Connection → Save. 앱은 토큰을 서
 
 - **Day 칩** — Total, Day 1, Day 2 … 로 순위 범위 지정.
 - **Include yellow card scores** 토글.
-- **Tiebreak**(우상단 ⚙) — 드래그로 동점자 처리 규칙 순서 변경. AIDA 기본값: 총점 → Red 카드 적은 순 → Yellow 카드 적은 순 → White 카드 많은 순.
+- **Tiebreak**(우상단 ⚙) — 드래그로 동점자 처리 규칙 순서 변경. AIDA 기본값(룰북 §4.2.16): 총점 → **AP−RP 차이 최소** → Red 적은 순 → Yellow 적은 순 → White 많은 순. 완전 동률은 같은 순위를 공유하고 다음 순위는 건너뜁니다(**올림픽 플레이싱**, 예: 공동 1위 → 다음은 3위). 깊이 RP는 정수 미터로 입력합니다(§4.1.22.1).
 - Opener와 invalidated(재경기된) 엔트리는 순위에서 제외됩니다. Results에는 모두 표시됩니다.
 - **Export CSV** — ↓ 아이콘으로 UTF-8 CSV 공유(모든 언어에서 Excel / Numbers로 정상 열림). 현재 Day / Yellow / Tiebreak 설정이 반영됩니다.
 
 ---
+
+### Records (WR/CR/NR) — 기록
+
+세계 / 대륙 / 국가 기록 시도를 표시하고 확정합니다.
+
+1. **대회 표시** — 이벤트 생성/수정 시 **Record Attempts**에서 **World Record** / **Continental**을 켭니다. 그러면 이벤트 카드와 Results 상단에 🏅 뱃지가 표시됩니다.
+2. **기록 확인** — **Results** 탭에서 **Check WR/CR/NR** 탭. 화이트카드 선수마다 AIDA 공식 기록(국가·종목·성별)을 조회해 WR / CR / NR을 제안합니다. 네트워크 필요 — 조회 실패는 건너뜁니다.
+3. **확정** *(Organizer / Main Judge)* — 제안은 점선 뱃지(예: "WR?")로 표시됩니다. 탭해서 등급을 확정하거나 해제합니다. 확정된 기록은 실선 뱃지로 표시되고 CSV 내보내기에 포함됩니다.
+
+> 화이트카드(유효) 결과만 대상입니다. 페널티가 있는 결과는 세계/대륙 기록이 될 수 없습니다(룰북 §10.2). 제안은 실현기록(RP)을 현재 기록과 비교한 것이며, 최종 판단은 심판이 합니다.
+
 
 ## 화면 & 언어
 
