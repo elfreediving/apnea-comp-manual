@@ -201,6 +201,17 @@ Notification text arrives in your chosen app language. You can turn notification
 
 ---
 
+## Documents (Consent Forms)
+
+Many events require athletes to submit AIDA consent forms before competing. Open **My Info → Documents**.
+
+- **Required forms** — Competition Entry, Image Rights consent, and Liability waiver. A **Medical Statement** is optional but often requested.
+- **Two ways to submit** — *Fill in app* (type the fields and sign on screen; a PDF is generated for you) or *Upload photo* of a signed paper copy.
+- **Medical Statement** — valid for one year from its issue date. Save it on your profile (Edit Profile → Medical Statement) to reuse it across events. If you upload a photo, enter the issue date shown on the certificate. A pressure injury or black-out *after* the issue date makes the certificate invalid — submit a new one.
+- **Deadline** — if mandatory forms are missing by the day before the event, you receive a push reminder listing what is missing.
+
+**For staff (Organizer / Main Judge):** open **More → Documents** to review each athlete's submission status, open files, and **download everything as a ZIP** (folders by document type). When an athlete declares an injury or black-out, the medical statement is flagged for **manual verification** — confirm the certificate in person, then tap *Mark verified*. Submitted documents are kept for 15 days after the event, then deleted.
+
 ## Setup: athletes, lines, and OTs
 
 > ![Setup screen layout](images/setup-screen.png)

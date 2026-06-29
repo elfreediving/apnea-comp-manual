@@ -201,6 +201,19 @@ Athlete Mode 有四个标签页：**My Info**、**Start List**、**Results** 和
 
 ---
 
+## Documents (同意书)
+
+许多赛事要求选手在参赛前提交 AIDA 同意书。打开 **My Info → Documents**。
+
+- **必需表单** — Competition Entry、Image Rights 同意书和 Liability 免责声明。**Medical Statement** 为可选项，但通常会被要求。
+- **两种提交方式** — *在应用内填写*（输入各字段并在屏幕上签名，系统会为你生成 PDF），或*上传*已签名的纸质副本*照片*。
+- **Medical Statement** — 自签发之日起一年内有效。将其保存到个人资料中（Edit Profile → Medical Statement），即可在多个赛事中重复使用。如果上传照片，请输入证书上显示的签发日期。签发日期*之后*发生的压力性损伤或晕厥会使证书失效——请重新提交一份。
+- **截止时间** — 如果到赛事前一天仍缺少必需表单，你会收到一条列出缺失项的推送提醒。
+
+**面向工作人员 (Organizer / Main Judge):** 打开 **More → Documents**，可查看每位选手的提交状态、打开文件，并**将全部内容下载为 ZIP**（按文档类型分文件夹）。当选手申报受伤或晕厥时，该 medical statement 会被标记为**人工核验**——当面确认证书后，点按 *Mark verified*。已提交的文档在赛事结束后保留 15 天，之后删除。
+
+---
+
 ## Setup：选手、Line 和 OT
 
 > ![Setup 界面布局](../images/setup-screen.png)
