@@ -175,7 +175,7 @@ Organizer 可以開啟一組 **broadcast 碼**（顯示為 **Athlete code**）�
 
 **選手：** 開啟應用程式 → Events → **Enter code** → 貼上 broadcast 碼。加入後你即可檢視 start list 與結果，並提交你的文件。
 
-> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+> ![Setup — Athlete (broadcast) code](../images/broadcast-code.png)
 
 ### Find me on AIDA
 
@@ -224,15 +224,15 @@ Athlete Mode 有四個分頁：**My Info**、**Start List**、**Results** 與 **
 
 ---
 
-![Athlete — My Info → Documents](images/documents-athlete-list.png)
+![Athlete — My Info → Documents](../images/documents-athlete-list.png)
 
-![Fill in app and sign](images/documents-fill-sign.png)
+![Fill in app and sign](../images/documents-fill-sign.png)
 
-![Medical Statement saved on profile](images/documents-medical-profile.png)
+![Medical Statement saved on profile](../images/documents-medical-profile.png)
 
-![Staff — Documents status & manual-check](images/documents-staff-status.png)
+![Staff — Documents status & manual-check](../images/documents-staff-status.png)
 
-![Staff — verify medical statement](images/documents-staff-verify.png)
+![Staff — verify medical statement](../images/documents-staff-verify.png)
 
 ## Setup：選手、Line 與 OT
 

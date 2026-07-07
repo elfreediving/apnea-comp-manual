@@ -175,7 +175,7 @@ Organizer は、どの選手でもイベントに直接参加できる単一の 
 
 **Athlete:** アプリを開く → Events → **Enter code** → broadcast コードを貼り付けます。参加すると、start list と結果を確認でき、書類を提出できます。
 
-> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+> ![Setup — Athlete (broadcast) code](../images/broadcast-code.png)
 
 ### Find me on AIDA
 
@@ -224,15 +224,15 @@ Athlete Mode には 4 つのタブがあります。**My Info**、**Start List**
 
 ---
 
-![Athlete — My Info → Documents](images/documents-athlete-list.png)
+![Athlete — My Info → Documents](../images/documents-athlete-list.png)
 
-![Fill in app and sign](images/documents-fill-sign.png)
+![Fill in app and sign](../images/documents-fill-sign.png)
 
-![Medical Statement saved on profile](images/documents-medical-profile.png)
+![Medical Statement saved on profile](../images/documents-medical-profile.png)
 
-![Staff — Documents status & manual-check](images/documents-staff-status.png)
+![Staff — Documents status & manual-check](../images/documents-staff-status.png)
 
-![Staff — verify medical statement](images/documents-staff-verify.png)
+![Staff — verify medical statement](../images/documents-staff-verify.png)
 
 ## Setup: 選手、Line、OT
 

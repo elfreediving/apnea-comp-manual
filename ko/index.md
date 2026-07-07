@@ -175,7 +175,7 @@ Organizer는 하나의 **broadcast 코드**(**Athlete code**로 표시됨)를 �
 
 **선수(Athlete):** 앱 열기 → Events → **Enter code** → broadcast 코드를 붙여넣습니다. 참여하면 start list와 결과를 조회하고 본인 서류를 제출할 수 있습니다.
 
-> ![Setup — Athlete (broadcast) code](images/broadcast-code.png)
+> ![Setup — Athlete (broadcast) code](../images/broadcast-code.png)
 
 ### AIDA에서 나 찾기
 
@@ -224,15 +224,15 @@ Organizer는 하나의 **broadcast 코드**(**Athlete code**로 표시됨)를 �
 
 ---
 
-![Athlete — My Info → Documents](images/documents-athlete-list.png)
+![Athlete — My Info → Documents](../images/documents-athlete-list.png)
 
-![Fill in app and sign](images/documents-fill-sign.png)
+![Fill in app and sign](../images/documents-fill-sign.png)
 
-![Medical Statement saved on profile](images/documents-medical-profile.png)
+![Medical Statement saved on profile](../images/documents-medical-profile.png)
 
-![Staff — Documents status & manual-check](images/documents-staff-status.png)
+![Staff — Documents status & manual-check](../images/documents-staff-status.png)
 
-![Staff — verify medical statement](images/documents-staff-verify.png)
+![Staff — verify medical statement](../images/documents-staff-verify.png)
 
 ## Setup: 선수, 라인, OT
 
