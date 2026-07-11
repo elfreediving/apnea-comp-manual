@@ -11,31 +11,33 @@
 ## 目录
 
 1. [开始之前](#开始之前)
-2. [快速开始](#快速开始)
-3. [角色及其权限](#角色及其权限)
-4. [创建赛事（Organizer）](#创建赛事organizer)
-5. [加入赛事（Staff）](#加入赛事staff)
-6. [作为选手加入](#作为选手加入)
-7. [Setup：选手、Line 和 OT](#setup选手line-和-ot)
-8. [Break Times](#break-times)
-9. [团队赛（Team）](#团队赛team)
-10. [Check-in](#check-in)
-11. [Start List & Speaker Mode](#start-list--speaker-mode)
-12. [输入判定结果](#输入判定结果)
-13. [罚分（Rulebook 17.8）](#罚分rulebook-178)
-14. [Protests（申诉）](#protests申诉)
-15. [Re-swim & Opener](#re-swim--opener)
-16. [日程调整（OT Delay）](#日程调整ot-delay)
-17. [推送通知](#推送通知)
-18. [离线运行](#离线运行)
-19. [AIDA 集成](#aida-集成)
-20. [多日赛事](#多日赛事)
-21. [结果与导出](#结果与导出)
-22. [显示 & 语言](#显示--语言)
-23. [FAQ](#faq)
-24. [故障排查](#故障排查)
-25. [隐私与数据](#隐私与数据)
-26. [联系方式](#联系方式)
+2. [登录](#登录)
+3. [快速开始](#快速开始)
+4. [角色及其权限](#角色及其权限)
+5. [创建赛事（Organizer）](#创建赛事organizer)
+6. [加入赛事（Staff）](#加入赛事staff)
+7. [作为选手加入](#作为选手加入)
+8. [Setup：选手、Line 和 OT](#setup选手line-和-ot)
+9. [Break Times](#break-times)
+10. [团队赛（Team）](#团队赛team)
+11. [Check-in](#check-in)
+12. [Start List & Speaker Mode](#start-list--speaker-mode)
+13. [输入判定结果](#输入判定结果)
+14. [罚分（Rulebook 17.8）](#罚分rulebook-178)
+15. [Protests（申诉）](#protests申诉)
+16. [Re-swim & Opener](#re-swim--opener)
+17. [日程调整（OT Delay）](#日程调整ot-delay)
+18. [推送通知](#推送通知)
+19. [离线运行](#离线运行)
+20. [AIDA 集成](#aida-集成)
+21. [多日赛事](#多日赛事)
+22. [结果与导出](#结果与导出)
+23. [显示 & 语言](#显示--语言)
+24. [删除账户](#删除账户)
+25. [FAQ](#faq)
+26. [故障排查](#故障排查)
+27. [隐私与数据](#隐私与数据)
+28. [联系方式](#联系方式)
 
 ---
 
@@ -49,6 +51,20 @@
 - 对于 Organizer：该比赛的 AIDA Token 和 Event ID。没有它们，应用将以 🧪 Mock mode 运行（示例数据，无 AIDA 同步）。
 
 我们建议每位裁判 / 工作人员使用自己的设备。应用支持多人同时在同一赛事中工作 — 结果会在设备之间实时同步。
+
+---
+
+## 登录
+
+Apnea Comp 需要一个账户，这样你的角色、赛事和结果就能在不同设备之间与你绑定。你可以通过三种方式登录：
+
+- **邮箱和密码** — 点按 **Sign Up** 创建账户（你会用一个一次性验证码确认你的邮箱），或者如果你已有账户则点按 **Sign In**。
+- **Continue with Apple** — 用你的 Apple ID 登录。如果你隐藏了邮箱，Apple 会给应用一个私密中转地址，一切仍能正常工作。
+- **Continue with Google** — 用你的 Google 账户登录。
+
+![带有 Apple 和 Google 的登录界面](../images/sign-in-social.png)
+
+无论你第一次选择哪种方式，都应继续使用同一种方式 — 换一种方式登录会创建一个独立的空账户。每台设备只需登录一次；应用会让你保持登录状态并自动恢复你的会话。
 
 ---
 
@@ -816,6 +832,20 @@ Edit Event → 粘贴两个值 → Test Connection → Save。应用会将 token
 点按你的头像 → **Language** → 选择 **System default**、**English**、**한국어**、**日本語**、**简体中文** 或 **繁體中文**。应用会立即切换并记住你的选择。
 
 比赛标准术语在每种语言中都保持英文 — OT、AP、RP、PB、discipline 代码（STA、DYN、…）、WHITE / YELLOW / RED、角色名称和 Line — 这样来自不同国家的工作人员读到的是相同的标签。
+
+---
+
+## 删除账户
+
+你可以在应用内删除你的账户 — 无需发邮件。
+
+1. 点按你的 **avatar**（顶角）→ **Edit Profile**。
+2. 滚动到底部，点按 **Delete Account**。
+3. 在对话框中确认。
+
+![Edit Profile 中的 Delete Account](../images/delete-account.png)
+
+这会永久删除你的账户和个人资料。它不会删除不属于你的比赛数据 — 例如，如果你以选手身份参赛，你在 organizer 的开始名单和结果中的条目会作为该赛事记录的一部分保留下来。
 
 ---
 

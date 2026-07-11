@@ -11,31 +11,33 @@ If you only have five minutes, read **Quick Start** below and the FAQ at the bot
 ## Contents
 
 1. [Before you start](#before-you-start)
-2. [Quick Start](#quick-start)
-3. [Roles and what each can do](#roles-and-what-each-can-do)
-4. [Creating an event (Organizer)](#creating-an-event-organizer)
-5. [Joining an event (Staff)](#joining-an-event-staff)
-6. [Joining as an athlete](#joining-as-an-athlete)
-7. [Setup: athletes, lines, and OTs](#setup-athletes-lines-and-ots)
-8. [Break Times](#break-times)
-9. [Team competitions](#team-competitions)
-10. [Check-in](#check-in)
-11. [Start List & Speaker Mode](#start-list--speaker-mode)
-12. [Judging results](#judging-results)
-13. [Penalties (Rulebook 17.8)](#penalties-rulebook-178)
-14. [Protests](#protests)
-15. [Re-swim & Opener](#re-swim--opener)
-16. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
-17. [Push notifications](#push-notifications)
-18. [Offline operation](#offline-operation)
-19. [AIDA integration](#aida-integration)
-20. [Multi-day events](#multi-day-events)
-21. [Results and export](#results-and-export)
-22. [Display & Language](#display--language)
-23. [FAQ](#faq)
-24. [Troubleshooting](#troubleshooting)
-25. [Privacy & Data](#privacy--data)
-26. [Contact](#contact)
+2. [Signing in](#signing-in)
+3. [Quick Start](#quick-start)
+4. [Roles and what each can do](#roles-and-what-each-can-do)
+5. [Creating an event (Organizer)](#creating-an-event-organizer)
+6. [Joining an event (Staff)](#joining-an-event-staff)
+7. [Joining as an athlete](#joining-as-an-athlete)
+8. [Setup: athletes, lines, and OTs](#setup-athletes-lines-and-ots)
+9. [Break Times](#break-times)
+10. [Team competitions](#team-competitions)
+11. [Check-in](#check-in)
+12. [Start List & Speaker Mode](#start-list--speaker-mode)
+13. [Judging results](#judging-results)
+14. [Penalties (Rulebook 17.8)](#penalties-rulebook-178)
+15. [Protests](#protests)
+16. [Re-swim & Opener](#re-swim--opener)
+17. [Schedule adjustments (OT Delay)](#schedule-adjustments-ot-delay)
+18. [Push notifications](#push-notifications)
+19. [Offline operation](#offline-operation)
+20. [AIDA integration](#aida-integration)
+21. [Multi-day events](#multi-day-events)
+22. [Results and export](#results-and-export)
+23. [Display & Language](#display--language)
+24. [Deleting your account](#deleting-your-account)
+25. [FAQ](#faq)
+26. [Troubleshooting](#troubleshooting)
+27. [Privacy & Data](#privacy--data)
+28. [Contact](#contact)
 
 ---
 
@@ -51,6 +53,21 @@ You will need:
 We recommend each judge / staff member uses their own device. The app supports several people working on the same event simultaneously — results sync between devices in real time.
 
 ---
+
+## Signing in
+
+Apnea Comp needs an account so your role, events, and results stay with you across devices. You can sign in three ways:
+
+- **Email and password** — tap **Sign Up** to create an account (you'll confirm your email with a one-time code), or **Sign In** if you already have one.
+- **Continue with Apple** — sign in with your Apple ID. If you hide your email, Apple gives the app a private relay address and everything still works.
+- **Continue with Google** — sign in with your Google account.
+
+![Sign-in screen with Apple and Google](images/sign-in-social.png)
+
+Whichever method you choose the first time is the one to keep using — signing in a different way creates a separate, empty account. You only sign in once per device; the app keeps you signed in and restores your session automatically.
+
+---
+
 
 ## Quick Start
 
@@ -822,6 +839,21 @@ Tap your avatar → **Language** → choose **System default**, **English**, **�
 Competition-standard terms stay in English in every language — OT, AP, RP, PB, discipline codes (STA, DYN, …), WHITE / YELLOW / RED, role names, and Line — so staff from different countries read the same labels.
 
 ---
+
+## Deleting your account
+
+You can delete your account from inside the app — no email required.
+
+1. Tap your **avatar** (top corner) → **Edit Profile**.
+2. Scroll to the bottom and tap **Delete Account**.
+3. Confirm in the dialog.
+
+![Delete Account in Edit Profile](images/delete-account.png)
+
+This permanently removes your account and profile. It does not delete competition data you don't own — for example, if you took part as an athlete, your entries in an organizer's start list and results stay part of that event's records.
+
+---
+
 
 ## FAQ
 
